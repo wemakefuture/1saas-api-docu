@@ -4,7 +4,7 @@ description: You will not believe how random this world can be.
 
 # Random
 
-### Get random Number via API
+### Random Number API 
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/nr" method="post" summary="Number" %}
 {% swagger-description %}
@@ -40,6 +40,8 @@ Default is integer.
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+Request example
 
 Request example:
 
@@ -113,7 +115,7 @@ Define how many chars your number should have.
 {% endswagger-response %}
 {% endswagger %}
 
-Request example:
+RequestName e:
 
 ```javascript
 Header:

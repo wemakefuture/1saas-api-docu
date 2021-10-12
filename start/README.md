@@ -4,11 +4,15 @@ description: Get started.
 
 # Start
 
-## Can I become who I want to be?
+{% content-ref url="intro.md" %}
+[intro.md](intro.md)
+{% endcontent-ref %}
 
-That's a tough question but thankfully, our team is on it. Please bear with us while we're investigating.
+{% content-ref url="platform.md" %}
+[platform.md](platform.md)
+{% endcontent-ref %}
 
-## Have you had a chance to answer the previous question?
-
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+{% content-ref url="help.md" %}
+[help.md](help.md)
+{% endcontent-ref %}
 
