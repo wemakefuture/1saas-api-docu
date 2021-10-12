@@ -273,7 +273,7 @@ Body:
 } 
 ```
 
-### Address validation API
+### Language validation API
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/lang" method="post" summary="Language Translation" %}
 {% swagger-description %}
