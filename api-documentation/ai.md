@@ -275,53 +275,21 @@ Body:
 
 ### Address validation API
 
-{% swagger baseUrl="https://api.1saas.co" path="/v1/addvall" method="post" summary="🟥 Address Validation" %}
+{% swagger baseUrl="https://api.1saas.co" path="/v1/lang" method="post" summary="Language Translation" %}
 {% swagger-description %}
 Post a request to the trans endpoint to Address Validation. We will detect the address automatically, and maybe correct it if needed.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="endpoint" type="string" %}
-addval
+lang
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="auth" type="string" %}
 Send your API Key in the header and recieve a status 200 or 402 or 401.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="" type="string" %}
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="location" type="string" %}
-{lat: 43.233332, lon: 23.2222243}
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="postalCode" type="string" %}
-12364
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="countryAbbr" type="string" %}
-US
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="country" type="string" %}
-USA
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="stateAbbr" type="string" %}
-TX
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="state" type="string" %}
-Texas
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="streetNumber" type="string" %}
-100
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="street" type="string" %}
-Baker st.
+{% swagger-parameter in="body" name="text" type="string" %}
+Simone is an amazing italian pizza hunter.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Works." %}
@@ -343,16 +311,7 @@ Header:
 
 Body:
 { 
-'streetNumber': '100'
-'street': 'North Main St'
-'streetAbbr': 'N Main St'
-'city': 'Boston'
-'state': 'Massachussetts'
-'stateAbbr': 'MA'
-'country': 'United States'
-'countryAbbr': 'US'
-'postalCode': '02114'
-'location': '{lat: 43.233332, lon: 23.2222243}'
+"text": "Simone is an amazing italian pizza hunter."
 } 
 ```
 
