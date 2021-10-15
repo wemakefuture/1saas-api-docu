@@ -295,7 +295,7 @@ Simone is an amazing italian pizza hunter.
 {% swagger-response status="200" description="Works." %}
 ```javascript
 { 
-		'result' : '1 Main Street, San Diego, CA, US' 
+		'result' : 'en' 
 } 
 ```
 {% endswagger-response %}
