@@ -16,7 +16,7 @@ Here you can find the API for 1SaaS.co currently we support the following endpoi
 | Mood from text detection (mood)       |            | Advanced Switch                                  | City   |
 | Email Validation (email)              |            | Timezone Switcher                                |        |
 | Translation (translate)               |            | Expand Shortend URL                              |        |
-| Address Validation (address)          |            | <p>E-Mail Validation</p><p>&#x26; Correction</p> |        |
+| Language Validation / Detection       |            | <p>E-Mail Validation</p><p>&#x26; Correction</p> |        |
 |                                       |            | Gender Name Detection                            |        |
 |                                       |            | Nation ISO Matchdown                             |        |
 |                                       |            | BMI Calculator                                   |        |

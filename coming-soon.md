@@ -75,6 +75,7 @@ description: Done and coming soon as well as updates/change logs.
   *   Remove the background in a picture
 
       https://api.1saas.co/v1**/rmb/**
+* Address Validation (address)
 {% endtab %}
 
 {% tab title="Code" %}
