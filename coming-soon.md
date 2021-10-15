@@ -6,48 +6,6 @@ description: Done and coming soon as well as updates/change logs.
 
 {% tabs %}
 {% tab title="AI" %}
-*   OCR (Optical character recognition)
-
-    * Detect text and letters in a document\
-      https://api.1saas.co/v1**/ocr/**
-
-
-*   Mood (Natural language processing of the mood of a text)
-
-    * Find the texts mood and sentiment\
-      https://api.1saas.co/v1**/mood/**
-
-
-*   Entities (Natural language processing of the entities of a text)
-
-    * Find the texts entities \
-      https://api.1saas.co/v1**/entity/**
-
-    ****
-*   Gender Name Detection
-
-    * Gender detect the name of a firstname\
-      https://api.1saas.co/v1**/gnd/**
-
-    ****
-*   Email Validation
-
-    *   Check and automatically correct Email addresses
-
-        https://api.1saas.co/v1**/email/**
-
-    ****
-*   Expand a shortened or redirecting URL
-
-    *   Get the full URL as return
-
-        https://api.1saas.co/v1**/esu/**
-
-    ****
-* Translate
-  * Send text and get the translation back.\
-    https://api.1saas.co/v1**/translate/**
-
 **Coming soon:**
 
 *   Firstname lastname detection
@@ -71,24 +29,17 @@ description: Done and coming soon as well as updates/change logs.
         https://api.1saas.co/v1**/trans/**
 
 
-* Remove background
-  *   Remove the background in a picture
+*   Remove background
 
-      https://api.1saas.co/v1**/rmb/**
+    *   Remove the background in a picture
+
+        https://api.1saas.co/v1**/rmb/**
+
+    ****
 * Address Validation (address)
 {% endtab %}
 
 {% tab title="Code" %}
-*   Javascript (JS)
-
-    * Run your Javascript code via one simple API\
-      https://api.1saas.co/v1**/js/**
-
-
-* Python (PY)
-  * Run your Python code via one simple API\
-    https://api.1saas.co/v1**/py/**
-
 **Coming soon:**
 
 *   Java (java)
@@ -105,28 +56,6 @@ description: Done and coming soon as well as updates/change logs.
 {% endtab %}
 
 {% tab title="No Code Helper" %}
-*   Advanced switching
-
-    * Switch complex tables and JSON objects\
-      https://api.1saas.co/v1**/asw/**
-
-
-*   Detect holidays
-
-    * Find in the corresponding nation and county if its a publicholiday\
-      https://api.1saas.co/v1**/free/**
-
-
-*   Weekend Checker
-
-    * Check if the day is a weekend day. 🍻\
-      https://api.1saas.co/v1**/beer/**
-
-
-* Timezone converter
-  * Convert the timezones to get the right time\
-    https://api.1saas.co/v1**/time/**
-
 **Coming soon:**
 
 *   Temporary file storage
@@ -150,10 +79,15 @@ description: Done and coming soon as well as updates/change logs.
         https://api.1saas.co/v1**/clean/**
 
 
-* Email Parsing
-  *   Parse the conent of the email (maybe we will put this into AI Tab)
+*   Email Parsing
 
-      https://api.1saas.co/v1**/parse/**
+    *   Parse the conent of the email (maybe we will put this into AI Tab)
+
+        https://api.1saas.co/v1**/parse/**
+
+    ****
+* PDF Merger
+  * Merge PDFs / convert PDFs
 {% endtab %}
 
 {% tab title="TAX" %}
@@ -163,36 +97,10 @@ description: Done and coming soon as well as updates/change logs.
   *   Check which VAT amount applies
 
       https://api.1saas.co/v1**/reverse/**
+* **Check VAT EU**
 {% endtab %}
 
 {% tab title="Random" %}
-*   Number generator
-
-    * Create random numbers.\
-      https://api.1saas.co/v1**/nr/**
-
-
-*   String
-
-    * Create random strings with numbers and letters.\
-      https://api.1saas.co/v1**/string/**
-
-
-*   Name
-
-    * Get a random name returned.\
-      https://api.1saas.co/v1**/name/**
-
-
-
-**Coming soon:**
-
-*   City
-
-    * Get a random city returned.\
-      https://api.1saas.co/v1**/city/**
-
-
 * Address
   *   Get a random address.
 
