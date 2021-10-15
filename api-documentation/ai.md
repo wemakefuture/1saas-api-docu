@@ -275,7 +275,7 @@ Body:
 
 ### Language validation API
 
-{% swagger baseUrl="https://api.1saas.co" path="/v1/lang" method="post" summary="Language Translation" %}
+{% swagger baseUrl="https://api.1saas.co" path="/v1/lang" method="post" summary="Language Validation / Detection API" %}
 {% swagger-description %}
 Post a request to the trans endpoint to Address Validation. We will detect the address automatically, and maybe correct it if needed.
 {% endswagger-description %}
