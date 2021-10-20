@@ -38,6 +38,10 @@ You can find the currently supported packages for our js endpoint [**here**](htt
 Need more modules (NPM modules)? Write us here: [beta1saas@1saas.co](mailto:beta1saas@1saas.co)
 {% endhint %}
 
+Here you can find some code examples:&#x20;
+
+{% embed url="https://gist.github.com/wemakefuture/f8c760a822848d516c65815eb7e183ad" %}
+
 Request example:
 
 ```javascript
@@ -88,6 +92,12 @@ We will return the result in the JSON \
 
 So please insert this at the end of your code!
 {% endhint %}
+
+Here you can find some examples:&#x20;
+
+{% embed url="https://gist.github.com/wemakefuture/55608487840505d3e5aa195919aa3836" %}
+Some Python Examples
+{% endembed %}
 
 {% hint style="success" %}
 You can simply import nearly all pip3 modules - just try it out. Just put as you are used to the module in the first lines of you python3 code.
