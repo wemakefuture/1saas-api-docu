@@ -21,7 +21,9 @@ Here you can find the API for 1SaaS.co currently we support the following endpoi
 |                                       |            | Nation ISO Matchdown                             |        |
 |                                       |            | BMI Calculator                                   |        |
 |                                       |            | UTM Parameters from URL                          |        |
-|                                       |            | VAT ID Checker                                   |        |
+|                                       |            | VAT and ID Checker                               |        |
+|                                       |            | JSON Bin                                         |        |
+|                                       |            | Save global Variabels                            |        |
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/" method="post" summary="Post Auth" %}
 {% swagger-description %}
