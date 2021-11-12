@@ -8,22 +8,22 @@ description: API Documenation for 1SaaS.co
 
 Here you can find the API for 1SaaS.co currently we support the following endpoints.
 
-| AI                                    | Code       | NoCode                                           | Random |
-| ------------------------------------- | ---------- | ------------------------------------------------ | ------ |
-| Picture content detection (pic)       | Javascript | Weekend                                          | Number |
-| OCR from pictures (ocr)               | Python     | Holiday                                          | String |
-| Entities from text detection (entity) |            | IP to GEO Location                               | Name   |
-| Mood from text detection (mood)       |            | Advanced Switch                                  | City   |
-| Email Validation (email)              |            | Timezone Switcher                                |        |
-| Translation (translate)               |            | Expand Shortend URL                              |        |
-| Language Validation / Detection       |            | <p>E-Mail Validation</p><p>&#x26; Correction</p> |        |
-|                                       |            | Gender Name Detection                            |        |
-|                                       |            | Nation ISO Matchdown                             |        |
-|                                       |            | BMI Calculator                                   |        |
-|                                       |            | UTM Parameters from URL                          |        |
-|                                       |            | VAT and ID Checker                               |        |
-|                                       |            | JSON Bin                                         |        |
-|                                       |            | Save global Variabels                            |        |
+| **AI**                                | **Code**   | **NoCode**                                       | **Random** | **Files**   |
+| ------------------------------------- | ---------- | ------------------------------------------------ | ---------- | ----------- |
+| Picture content detection (pic)       | Javascript | Weekend                                          | Number     | Files       |
+| OCR from pictures (ocr)               | Python     | Holiday                                          | String     | Temp Files  |
+| Entities from text detection (entity) |            | IP to GEO Location                               | Name       | PDF Merger  |
+| Mood from text detection (mood)       |            | Advanced Switch                                  | City       | HTML to PDF |
+| Email Validation (email)              |            | Timezone Switcher                                |            |             |
+| Translation (translate)               |            | Expand Shortend URL                              |            |             |
+| Language Validation / Detection       |            | <p>E-Mail Validation</p><p>&#x26; Correction</p> |            |             |
+|                                       |            | Gender Name Detection                            |            |             |
+|                                       |            | Nation ISO Matchdown                             |            |             |
+|                                       |            | BMI Calculator                                   |            |             |
+|                                       |            | UTM Parameters from URL                          |            |             |
+|                                       |            | VAT and ID Checker                               |            |             |
+|                                       |            | JSON Bin                                         |            |             |
+|                                       |            | Save global Variabels                            |            |             |
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/" method="post" summary="Post Auth" %}
 {% swagger-description %}

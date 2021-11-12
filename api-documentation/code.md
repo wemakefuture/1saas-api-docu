@@ -41,6 +41,8 @@ Need more modules (NPM modules)? Write us here: [beta1saas@1saas.co](mailto:beta
 Here you can find some code examples:&#x20;
 
 {% embed url="https://gist.github.com/wemakefuture/f8c760a822848d516c65815eb7e183ad" %}
+Some JavaScript Examples
+{% endembed %}
 
 Request example:
 

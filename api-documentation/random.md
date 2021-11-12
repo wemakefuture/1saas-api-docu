@@ -4,7 +4,7 @@ description: You will not believe how random this world can be.
 
 # Random
 
-### Random Number API 
+### Random Number API&#x20;
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/nr" method="post" summary="Number" %}
 {% swagger-description %}
@@ -15,7 +15,7 @@ Post a request to the number endpoint. This endpoint will return you a random nu
 nr
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="auth" type="string" %}
+{% swagger-parameter in="header" name="auth" type="string" required="true" %}
 Send your API Key in the header and recieve a status 200 or 402 or 401.
 {% endswagger-parameter %}
 
@@ -65,7 +65,7 @@ Body:
 Post a request to the string endpoint. This endpoint will return you a random string within a defined length.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="endpoint" type="string" %}
+{% swagger-parameter in="path" name="endpoint" type="string" required="true" %}
 string
 {% endswagger-parameter %}
 

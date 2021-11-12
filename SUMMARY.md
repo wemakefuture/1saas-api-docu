@@ -12,4 +12,5 @@
   * [Code](api-documentation/code.md)
   * [NoCode Helper](api-documentation/nocode-helper.md)
   * [Random](api-documentation/random.md)
+  * [Files](api-documentation/files.md)
 * [Coming Soon & Updates](coming-soon.md)
