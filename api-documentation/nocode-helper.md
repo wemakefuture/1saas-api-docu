@@ -423,7 +423,7 @@ If you send a ISO:
 {% endswagger %}
 
 {% hint style="info" %}
-Post either Name (country name) OR ISO Code. 
+Post either Name (country name) OR ISO Code.&#x20;
 {% endhint %}
 
 Request example Name:
@@ -654,7 +654,7 @@ IE
 {% endswagger %}
 
 {% hint style="danger" %}
-Disclaimer: YOU ACT ON YOUR OWN RISK - This is no tax consultation and only provided via the [https://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl](https://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl) service. You  are responsible for any harms to your or your business and you cannot claim any charges!
+Disclaimer: YOU ACT ON YOUR OWN RISK - This is no tax consultation and only provided via the [https://ec.europa.eu/taxation\_customs/vies/checkVatService.wsdl](https://ec.europa.eu/taxation\_customs/vies/checkVatService.wsdl) service. You  are responsible for any harms to your or your business and you cannot claim any charges!
 {% endhint %}
 
 Request example:
@@ -677,3 +677,558 @@ OR
 "ID":"98765343"
 }
 ```
+
+## Store JSON Data via API
+
+{% swagger method="post" path="/v1/json" baseUrl="https://api.1saas.co" summary="JSON Bin" %}
+{% swagger-description %}
+Post a request to the json endpoint. This endpoint is to store json data online. U can update, get and delete it.
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="json" type="JSON" %}
+data to store
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="binId" type="String" %}
+id of the bin where data is stored
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="update" type="Boolean" %}
+true when updating an existing bin
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="delete" type="Boolean" %}
+true when deleting an existing bin
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" required="false" %}
+json
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request Example Create JSON Bin
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+"json": {
+        "example": "data"
+        }
+}
+```
+
+#### Request Example Update JSON Bin
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"binId": "YOUR-BIN-ID",
+"json": {
+        "example": "data"
+        },
+"update": true
+}
+```
+
+#### Request Example Delete JSON Bin
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+"binId": "YOUR-BIN-ID"
+}
+```
+
+#### Request Example List all JSON Bins
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:{}
+```
+
+## Save variables online via API
+
+{% swagger method="post" path="/v1/globalVariable" baseUrl="https://api.1saas.co" summary="Global Variable" %}
+{% swagger-description %}
+Post a request to the globalVariable endpoint. This endpoint is to store a variable of any datatype online. U can update, get, list and delete variables
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+globalVariable
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="variable" type="String" required="true" %}
+name of the stored variable
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="value" type="Any" %}
+value to be stored in variable
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="update" type="Boolean" %}
+true, when updating an existing variable
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="delete" type="Boolean" %}
+true, when deleting an existing variable
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+
+
+#### Request Example Create Global Variable
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"variable": "YOUR-VARIABLE-NAME",
+"value": "ANY-VALUE"
+}
+```
+
+#### Request Example Update Global Variable
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"variable": "YOUR-VARIABLE-NAME",
+"value": "ANY-VALUE"
+"update": true
+}
+```
+
+#### Request Example Delete Global Variable
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"variable": "YOUR-VARIABLE-NAME",
+"delete": true
+}
+```
+
+#### Request Example Get Global Variable
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"variable": "YOUR-VARIABLE-NAME"
+}
+```
+
+#### Request Example List Global Variables
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:{}
+```
+
+####
+
+## Verify Emails by calling an API
+
+{% swagger method="post" path="/v1/emailVerifier" baseUrl="http://api.1saas.co" summary="Email Verifier" %}
+{% swagger-description %}
+Post a request to the emailVerifier endpoint. This endpoint is to check if a mail is fake, free etc.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+emailVerifier
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="email" type="String" %}
+email to verify and check
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request Example
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"email": "youremail@verify.com"
+}
+```
+
+## Shorten your URL&#x20;
+
+{% swagger method="post" path="/v1/url" baseUrl="https://api.1saas.co" summary="URL-Shortener" %}
+{% swagger-description %}
+shorten your URL with the API.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+url
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="identifier" type="String" %}
+the identifier of the shortend Url
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="destination" type="String" %}
+the destination Url of the shortened Url
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="update" type="String" %}
+boolean, true if you want to update a destination
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="delete" type="String" %}
+boolean, true if you want to delete a url
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request Example Create&#x20;
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"destination": "https://1saas.co"
+}
+```
+
+#### Request Example Update
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "destination": "https://1saas.co",
+    "update": true,
+    "identifier": "YOUR-IDENTIFIER"
+}
+```
+
+#### Request Example List All
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:{}
+```
+
+#### Request Example Delete
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "identifier": "6fhF436F",
+    "delete": true
+}
+```
+
+## Next Gen Replacer
+
+
+
+{% swagger method="post" path="/replacer" baseUrl="https://api.1saas.co/v1" summary="Replacer" %}
+{% swagger-description %}
+The replacer allows you define an object with values to replace and the new value. You can replace any kind of value.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+replacer
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="replaceItems" type="Object" %}
+the object with the items to replace, and the new values
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="data" type="Array" %}
+the data you want to replace, can be an array, object, int
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request Example
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "data": [
+        "Test1",
+        {
+            "TestKey": "Test2"
+        }
+    ],
+    
+    "replaceItems": {
+        "key1": {
+            "oldValue": "Test1",
+            "newValue": "newValue1"
+        },
+        "key2": {
+            "oldValue": "Test2",
+            "newValue": "newValue2"
+        }
+    }
+}
+```
+
+## QR Code Generator / Reader
+
+{% swagger method="post" path="/QR" baseUrl="https://api.1saas.co/v1" summary="QR Code" %}
+{% swagger-description %}
+With this endpoint is able to create a QR-Code with given Data. You can read data from a given QR-Code.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+QR
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="imageUrl" type="String" %}
+the imageUrl with from the QR-Code you want to read the data of
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="data" type="String" %}
+the data you want the QR-Code to hide
+{% endswagger-parameter %}
+{% endswagger %}
+
+#### Request Example Read from URL
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "imageUrl": "URL-TO-IMAGE"
+}
+```
+
+#### Request Example Create with data
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "data": "TEXT TO FOR THE QR-CODE"
+}
+```
+
+## Calender Week
+
+{% swagger method="post" path="/calweek" baseUrl="https::/api.1saas.co" summary="Calender Week" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+calweek
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="unixTimestamp" type="Timestamp" %}
+a Timestamp
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data" type="Data" %}
+a Data
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="weekNumber" type="Integer" %}
+number of the week from year
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="year" type="Integer" %}
+a year 
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request Example Current week
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:{}
+```
+
+#### Request Example Week number
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "weekNumber": 1
+}
+```
+
+#### Request Example Week number and Year
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "weekNumber": 1,
+    "year": 2021
+}
+```
+
+#### Request Example Unix Timestamp
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "unixTimestamp": 1636815236
+}
+```
+
+#### Request Example Date
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "date": "04 Dec 1995 00:12:00 GMT"
+}
+```
+
+##
+
+##
+
+
+
