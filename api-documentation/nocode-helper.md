@@ -1122,9 +1122,9 @@ Body:
 }
 ```
 
-## Calender Week
+## Calendar Week
 
-{% swagger method="post" path="/v1/calweek" baseUrl="https://api.1saas.co" summary="Calender Week" %}
+{% swagger method="post" path="/v1/calweek" baseUrl="https://api.1saas.co" summary="Calendar Week" %}
 {% swagger-description %}
 
 {% endswagger-description %}

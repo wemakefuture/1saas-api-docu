@@ -24,11 +24,6 @@ Here you can find the API for 1SaaS.co currently we support the following endpoi
 |                                       |            | VAT and ID Checker                               |            |             |
 |                                       |            | JSON Bin                                         |            |             |
 |                                       |            | Save global Variabels                            |            |             |
-|                                       |            | URL Shortner                                     |            |             |
-|                                       |            | Email Verfifer                                   |            |             |
-|                                       |            | Advanced Replacer                                |            |             |
-|                                       |            | QR Code reader                                   |            |             |
-|                                       |            | Calendar Week                                    |            |             |
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/" method="post" summary="Post Auth" %}
 {% swagger-description %}
