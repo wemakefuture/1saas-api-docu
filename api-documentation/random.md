@@ -138,7 +138,7 @@ Post a request to the name endpoint. This endpoint will return you a random name
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="endpoint" type="string" %}
-nr
+name
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="auth" type="string" %}
