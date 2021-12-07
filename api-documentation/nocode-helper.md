@@ -1226,6 +1226,131 @@ Body:
 }
 ```
 
+## Hash, Encrypt and Decrypt with our API
+
+{% swagger method="post" path="/crypto" baseUrl="https://api.1saas.co/v1" summary="Crypto" %}
+{% swagger-description %}
+With crypto you are able to hash text with a secret key. Encrypt text and also decrypt text that is already encrypted.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="String" %}
+crypto
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="encrypt" type="Boolean" %}
+true when you want to encrypt
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="decrypt" type="Boolean" %}
+true when yo want to decrypt
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="cryptoType" type="String" %}
+type for encrypting or of the encrypted text
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="hash" type="Boolean" %}
+true when you want to hash
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="hashType" type="String" %}
+hashing type
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="text" type="String" %}
+text to encrypt or hash
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="encryptedText" type="String" %}
+encrypted text you want to decrypt
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="secretKey" type="String" %}
+key you want to use for hashing or encrypting
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Works." %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### HASH:
+
+for HMAC add Hmac in front of the hash function e.g HmacMD5
+
+* **MD5**
+* **SHA1**
+* **SHA3**
+* **SHA256**
+* **SHA224**
+* **SHA384**
+* **SHA512**
+* **RIPEMD160**
+
+#### CRYPTO
+
+* **AES**
+* **DES**
+* **TripleDES**
+* **Rabbit**
+* **RC4**
+* **RC4Drop**
+
+#### Request Example: Hash a Text
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "hash": true,
+    "text": "YOUR-TEXT",
+    "secretKey": "YOUR-SECRET-KEY",
+    "hashType": "ANY-TYPE-FROM-HASH-LIST"
+}
+```
+
+#### Request Example: Encrypt a Text
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "encrypt": true,
+    "text": "YOUR-TEXT",
+    "secretKey": "YOUR-SECRET-KEY",
+    "cryptoType": "ANY-TYPE-FROM-CRYPTO-LIST"
+}
+```
+
+#### Request Example: Decrypt a Text
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+    "decrypt": true,
+    "encryptedText": "YOUR-ENCRYPTED-TEXT",
+    "secretKey": "YOUR-SECRET-KEY",
+    "cryptoType": "THE-TYPE-USED-FOR-ENCRYPTION"
+}
+```
+
 ##
 
 ##
