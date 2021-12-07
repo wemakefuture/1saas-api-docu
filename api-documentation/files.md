@@ -242,7 +242,7 @@ The following options can be applied to the output pdf file
 
 ### Split PDF
 
-{% swagger method="post" path="/v1/splitpdf" baseUrl="https://api.1saas.co" summary="Splis a pdf into custom defined sections" %}
+{% swagger method="post" path="/v1/splitpdf" baseUrl="https://api.1saas.co" summary="Splits a pdf into custom defined sections" %}
 {% swagger-description %}
 
 {% endswagger-description %}
