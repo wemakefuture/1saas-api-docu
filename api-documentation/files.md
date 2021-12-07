@@ -239,3 +239,49 @@ The following options can be applied to the output pdf file
 }
 ```
 {% endcode %}
+
+### Split PDF
+
+{% swagger method="post" path="/v1/splitpdf" baseUrl="https://api.1saas.co" summary="Splis a pdf into custom defined sections" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="auth" required="true" %}
+Send your API Key in the header and recieve a status 200 or 402 or 401.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="url" %}
+Public URL of the pdf
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="buffer" type="Buffer" %}
+Buffer
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="pages" type="Array" required="true" %}
+Array of strings defining the sections which you want to split the pdf into:
+
+Example: `["1", "3-5", "2-3]`
+
+Splits PDF into three pdfs:
+
+only page 1,
+
+page 3 to 5
+
+page 2 and 3
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Array of URL of the pdfs (lasts 24h)" %}
+```javascript
+{
+    pdfUrls: [
+        url1,
+        url2,
+        ...
+    ]
+}
+```
+{% endswagger-response %}
+{% endswagger %}
