@@ -1,5 +1,137 @@
 # NoCode Helper
 
+### Scheduler and Posthook
+
+This endpoint allows you to time and schedule a webhook to be executed.
+
+{% swagger baseUrl="https://api.1saas.co" path="/v1/scheduler" method="post" summary="Scheduler" %}
+{% swagger-description %}
+Post a request to the Scheduler endpoint.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="endpoint" type="string" required="true" %}
+scheduler
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="auth" type="string" required="true" %}
+Send your API Key in the header and recieve a status 200 or 402 or 401.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data" type="object" required="true" %}
+JSON Object
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="webhook / httpendpoint" type="url" required="true" %}
+The webhook URL you want to later trigger
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="intervalOptions" required="true" type="String" %}
+SEE BELOW for Examples 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="endDate" type="String" %}
+Any ISO 8601 or Linux Timestamp
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Works." %}
+
+{% endswagger-response %}
+{% endswagger %}
+
+Request example One time execution:
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+{
+    "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
+    "data": {
+        "message": "Hello I will execute this once"
+    },
+    "intervalOptions": ["1639150351"]
+    "endDate": "2022-01-05T15:32:31.984Z"
+}
+```
+
+Request example multiple executions at a set time:
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+{
+    "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
+    "data": {
+        "message": "Hello lets time multiple hooks"
+    },
+    "intervalOptions": ["1639150351", "2021-12-10T15:32:31.984Z"]
+    "endDate": "2022-01-05T15:32:31.984Z"
+}
+```
+
+Request example to setup a cronjob:
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+{
+    "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
+    "data": {
+        "message": "Hello lets run this every minute"
+    },
+    "intervalOptions": "cronjob;* * * * *"
+    "endDate": "2022-01-05T15:32:31.984Z"
+}
+```
+
+{% hint style="info" %}
+You can use the cron syntax find more here: [https://crontab.guru/](https://crontab.guru)
+{% endhint %}
+
+Request example to setup a timed post hook:
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+{
+    "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
+    "data": {
+        "message": "Hello lets run this every third week from now on"
+    },
+    "intervalOptions": "weeks;3"
+    "endDate": "2022-01-05T15:32:31.984Z"
+}
+```
+
+Valid options are:&#x20;
+
+```javascript
+hours
+days
+weeks
+months
+```
+
+Some examples ex. : "hours;5"
+
+```
+hours: every X hours (X -> Options 2) Ex: hours;5 -> every 5 hours
+days: every X days (X -> Options 2) Ex: days;2 -> every 2 days
+weeks: every X weeks (X -> Options 2) Ex: weeks;1 -> every week
+months: every X months (X -> Options 2) Ex: months;4 -> every 4 months
+```
+
 ### Weekend checking and validating API
 
 {% swagger baseUrl="https://api.1saas.co" path="/v1/weekend" method="post" summary="Weekend Checker" %}
