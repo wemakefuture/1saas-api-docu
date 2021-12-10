@@ -38,7 +38,7 @@ Any ISO 8601 or Linux Timestamp
 {% endswagger-response %}
 {% endswagger %}
 
-Request example One time execution:
+#### Request example One time execution:
 
 ```javascript
 Header:
@@ -56,7 +56,7 @@ Header:
 }
 ```
 
-Request example multiple executions at a set time:
+#### Request example multiple executions at a set time:
 
 ```javascript
 Header:
@@ -74,7 +74,7 @@ Header:
 }
 ```
 
-Request example to setup a cronjob:
+#### Request example to setup a cronjob:
 
 ```javascript
 Header:
@@ -96,7 +96,7 @@ Header:
 You can use the cron syntax find more here: [https://crontab.guru/](https://crontab.guru)
 {% endhint %}
 
-Request example to setup a timed post hook:
+#### Request example to setup a timed post hook:
 
 ```javascript
 Header:
