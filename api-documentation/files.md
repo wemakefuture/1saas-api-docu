@@ -366,3 +366,33 @@ page 2 and 3
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+#### Request Example (with URL)
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+    "url": "https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_500_kB.pdf",
+    "pages": ["1", "4-5"]
+} 
+```
+
+#### Request Example (with Buffer)
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+    "buffer": BUFFER,
+    "pages": ["2-3", "5"]
+} 
+```
