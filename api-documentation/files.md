@@ -178,6 +178,87 @@ Possible values for pages are the following:&#x20;
 "4-8"      // page 4 to 8
 ```
 
+#### Request Example (only URLs)
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+    "files": [
+        {
+            "url": "http://www.africau.edu/images/default/sample.pdf",
+            "pages": [1]
+        },
+        {
+            "url":"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+        },
+        {
+            "url":"https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_500_kB.pdf",
+            "pages": "2-4"
+        }
+    ],
+    "getAsUrl": true
+} 
+```
+
+#### Request Example (only Buffers)
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+    "files": [
+        {
+            "Buffer": BUFFER1,
+            "pages": [1]
+        },
+        {
+            "Buffer": BUFFER2
+        },
+        {
+            "url": BUFFER3,
+            "pages": "2-4"
+        }
+    ],
+    "getAsUrl": true
+} 
+```
+
+#### Request Example (URL + Buffers)
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{ 
+    "files": [
+        {
+            "Buffer": BUFFER1,
+            "pages": [1]
+        },
+        {
+            "Buffer": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+        },
+        {
+            "url": "https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_500_kB.pdf",
+            "pages": "2-4"
+        }
+    ],
+    "getAsUrl": true
+} 
+```
+
 ### HTML to PDF
 
 {% swagger method="post" path="/v1/htmltopdf" baseUrl="https://api.1saas.co" summary="Convert HTML to a pdf" %}
