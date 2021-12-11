@@ -25,12 +25,26 @@ JSON Object
 The webhook URL you want to later trigger
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="intervalOptions" required="true" type="String" %}
-SEE BELOW for Examples 
+{% swagger-parameter in="body" name="intervalOptions" required="true" type="String/NR" %}
+SEE BELOW for Examples \
+\
+Any:
+
+&#x20;ISO 8601 or Linux Timestamp
+
+
+
+CAREFUL - you need to send the Unixtimestamp as integer and the ISO 8601 as String
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="endDate" type="String" %}
-Any ISO 8601 or Linux Timestamp
+{% swagger-parameter in="body" name="endDate" type="String/NR" %}
+Any:
+
+&#x20;ISO 8601 or Linux Timestamp
+
+
+
+CAREFUL - you need to send the Unixtimestamp as integer and the ISO 8601 as String
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Works." %}
