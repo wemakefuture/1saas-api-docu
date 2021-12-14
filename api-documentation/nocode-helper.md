@@ -57,9 +57,9 @@ CAREFUL - you need to send the Unixtimestamp as integer and the ISO 8601 as Stri
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
-
+Body:
 {
     "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
     "data": {
@@ -75,9 +75,9 @@ Header:
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
-
+Body:
 {
     "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
     "data": {
@@ -93,9 +93,9 @@ Header:
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
-
+Body:
 {
     "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
     "data": {
@@ -115,9 +115,9 @@ You can use the cron syntax find more here: [https://crontab.guru/](https://cron
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
-
+Body:
 {
     "webhook":"https://somehookaddress.com/lkajsdlkajsdlk",
     "data": {
@@ -144,6 +144,91 @@ hours: every X hours (X -> Options 2) Ex: hours;5 -> every 5 hours
 days: every X days (X -> Options 2) Ex: days;2 -> every 2 days
 weeks: every X weeks (X -> Options 2) Ex: weeks;1 -> every week
 months: every X months (X -> Options 2) Ex: months;4 -> every 4 months
+```
+
+{% swagger method="get" path="/v1/scheduler" baseUrl="https://api.1saas.co" summary="Get a list of all active tasks of the users scheduler" %}
+{% swagger-description %}
+Returns an array of informations about all running tasks of a user
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="auth" required="true" %}
+Send your API Key in the header and recieve a status 200 or 402 or 401.
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Array of objects with information about users tasks" %}
+```javascript
+{
+    "tasks": [
+        {
+            "taskID": TASKID,
+            "webhook": "https://somehookaddress.com/lkajsdlkajsd",
+            "nextExecution": "2022-01-05T15:32:31.984Z"
+        },
+        ...
+    ]
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="204: No Content" description="no tasks found" %}
+```javascript
+{
+    "message": "No running task could be found"
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Requst example
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+```
+
+{% swagger method="delete" path="/v1/scheduler" baseUrl="https://api.1saas.co" summary="Deletes a task" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="header" type="" name="auth" required="true" %}
+Send your API Key in the header and recieve a status 200 or 402 or 401.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="taskID" required="true" %}
+ID of the task
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="success" %}
+```javascript
+{
+    "message": "Scheduler with id 'TASKID' was successfully deleted"
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="204: No Content" description="no task found" %}
+```javascript
+{
+   "message": "No task with id 'TASKID' could be found"
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request example
+
+```javascript
+Header:
+{
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+Body:
+{
+    "taskID": TASKID
+}
 ```
 
 ### Weekend checking and validating API
