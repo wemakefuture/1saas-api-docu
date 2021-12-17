@@ -279,13 +279,13 @@ Request example:
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
 
 Body:
 { 
-"dateformat": "dd.mm.yyyy",
-"date": "12/24/2030" 
+    "dateformat": "dd.mm.yyyy",
+    "date": "12/24/2030" 
 } 
 ```
 
@@ -349,14 +349,14 @@ Request example:
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
 
 Body:
 { 
-"countryCode": "US",
-"state": "texas",
-"year": "2040"
+    "countryCode": "US",
+    "state": "texas",
+    "year": "2040"
 } 
 ```
 
@@ -421,14 +421,14 @@ Request example external JSON:
 ```javascript
 Header:
 {
-"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+    "auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
 }
 
 Body:
 { 
-"external": true
-"json": "https://gist.github.com/wemakefuture/5e58cc11cc017846ac3f2f357d28064f",
-"key": "Austria"
+    "external": true,
+    "json": "https://gist.githubusercontent.com/wemakefuture/423835749ca5f320c8e0dcba12b5d02a/raw/6cda0348e67183484d41f26e0db5413cac4edc67/Nations_to_ISO3166_ALPHA",
+    "key": "Austria"    
 } 
 ```
 
@@ -442,37 +442,37 @@ Header:
 
 Body:
 { 
-"external": false
-"json": {
-"Austria": 20,
-"Belgium": 21,
-"Bulgaria": 20,
-"Croatia": 25,
-"Cyprus": 19,
-"Czechia": 21,
-"Denmark": 25,
-"Estonia": 20,
-"Finland": 24,
-"France": 20,
-"Germany": 19,
-"Greece": 24,
-"Hungary": 27,
-"Ireland": 23,
-"Italy": 22,
-"Latvia": 21,
-"Lithuania": 21,
-"Luxembourg": 17,
-"Malta": 18,
-"Netherlands": 21,
-"Poland": 23,
-"Portugal": 23,
-"Romania": 19,
-"Slovakia": 20,
-"Slovenia": 22,
-"Spain": 21,
-"Sweden": 25
-},
-"key": "Austria"
+    "external": false,
+    "json": {
+        "Austria": 20,
+        "Belgium": 21,
+        "Bulgaria": 20,
+        "Croatia": 25,
+        "Cyprus": 19,
+        "Czechia": 21,
+        "Denmark": 25,
+        "Estonia": 20,
+        "Finland": 24,
+        "France": 20,
+        "Germany": 19,
+        "Greece": 24,
+        "Hungary": 27,
+        "Ireland": 23,
+        "Italy": 22,
+        "Latvia": 21,
+        "Lithuania": 21,
+        "Luxembourg": 17,
+        "Malta": 18,
+        "Netherlands": 21,
+        "Poland": 23,
+        "Portugal": 23,
+        "Romania": 19,
+        "Slovakia": 20,
+        "Slovenia": 22,
+        "Spain": 21,
+        "Sweden": 25
+    },
+    "key": "Austria"
 } 
 ```
 
