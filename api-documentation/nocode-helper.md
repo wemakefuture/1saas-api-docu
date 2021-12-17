@@ -188,7 +188,7 @@ Header:
 }
 ```
 
-{% swagger method="delete" path="/v1/scheduler" baseUrl="https://api.1saas.co" summary="Deletes a task" %}
+{% swagger method="put" path="/v1/scheduler" baseUrl="https://api.1saas.co" summary="Deletes a task" %}
 {% swagger-description %}
 
 {% endswagger-description %}
