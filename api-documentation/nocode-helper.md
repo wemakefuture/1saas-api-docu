@@ -25,12 +25,31 @@ JSON Object
 The webhook URL you want to later trigger
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="intervalOptions" required="true" type="String/NR" %}
-SEE BELOW for Examples \
+{% swagger-parameter in="body" name="intervalType" type="number" required="true" %}
+1 = one-time execution
+
+\
+
+
+2 = multiple executions at a set time
+
+\
+
+
+3 = setup a cronjob
+
+\
+
+
+4 = setup a timed post hook
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="intervalOptions" required="true" type="any" %}
+SEE BELOW for Examples\
 \
 Any:
 
-&#x20;ISO 8601 or Linux Timestamp
+ISO 8601 or Linux Timestamp
 
 
 
@@ -52,7 +71,9 @@ CAREFUL - you need to send the Unixtimestamp as integer and the ISO 8601 as Stri
 {% endswagger-response %}
 {% endswagger %}
 
-#### Request example One time execution:
+#### &#x20;Request examples
+
+#### intervalType = 1 (One time execution)
 
 ```javascript
 Header:
@@ -65,12 +86,12 @@ Body:
     "data": {
         "message": "Hello I will execute this once"
     },
+    "intervalType": 1,
     "intervalOptions": ["1639150351"]
-    "endDate": "2022-01-05T15:32:31.984Z"
 }
 ```
 
-#### Request example multiple executions at a set time:
+#### intervalType = 2 (multiple executions at a set time)
 
 ```javascript
 Header:
@@ -83,12 +104,12 @@ Body:
     "data": {
         "message": "Hello lets time multiple hooks"
     },
+    "intervalType": 2,
     "intervalOptions": ["1639150351", "2021-12-10T15:32:31.984Z"]
-    "endDate": "2022-01-05T15:32:31.984Z"
 }
 ```
 
-#### Request example to setup a cronjob:
+#### intervalType = 3 (cronjob)
 
 ```javascript
 Header:
@@ -101,7 +122,8 @@ Body:
     "data": {
         "message": "Hello lets run this every minute"
     },
-    "intervalOptions": "cronjob;* * * * *"
+    "intervalType": 3,
+    "intervalOptions": "* * * * *",
     "endDate": "2022-01-05T15:32:31.984Z"
 }
 ```
@@ -110,7 +132,7 @@ Body:
 You can use the cron syntax find more here: [https://crontab.guru/](https://crontab.guru)
 {% endhint %}
 
-#### Request example to setup a timed post hook:
+#### intervalType = 4 (setup a timed post hook)
 
 ```javascript
 Header:
@@ -123,6 +145,7 @@ Body:
     "data": {
         "message": "Hello lets run this every third week from now on"
     },
+    "intervalType": 4,
     "intervalOptions": "weeks;3"
     "endDate": "2022-01-05T15:32:31.984Z"
 }
