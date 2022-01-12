@@ -1075,8 +1075,7 @@ Header:
 
 Body:
 {
-"variable": "YOUR-VARIABLE-NAME",
-"value": "ANY-VALUE"
+"variable": {"key": "value"}
 }
 ```
 
@@ -1090,8 +1089,8 @@ Header:
 
 Body:
 {
-"variable": "YOUR-VARIABLE-NAME",
-"value": "ANY-VALUE"
+"variableId": "YOUR-VARIABLE-ID",
+"variable": {"key": "new-value"},
 "update": true
 }
 ```
@@ -1106,7 +1105,7 @@ Header:
 
 Body:
 {
-"variable": "YOUR-VARIABLE-NAME",
+"variableId": "YOUR-VARIABLE-ID",
 "delete": true
 }
 ```
@@ -1121,7 +1120,7 @@ Header:
 
 Body:
 {
-"variable": "YOUR-VARIABLE-NAME"
+"variableId": "YOUR-VARIABLE-ID"
 }
 ```
 
