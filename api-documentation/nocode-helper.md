@@ -1202,6 +1202,10 @@ boolean, true if you want to update a destination
 boolean, true if you want to delete a url
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="custom" type="String" %}
+custom identifier, is unique when already exists random one assigned
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Works." %}
 ```javascript
 {
@@ -1222,6 +1226,19 @@ Header:
 Body:
 {
 "destination": "https://1saas.co"
+}
+```
+
+```javascript
+Header:
+{
+"auth": "97ab95b4-ca9c-****-****-9c1bfcd0****"
+}
+
+Body:
+{
+"destination": "https://1saas.co"
+"custom": "custom identifier"
 }
 ```
 
