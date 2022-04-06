@@ -2,7 +2,7 @@
 description: Done and coming soon as well as updates/change logs.
 ---
 
-# Coming Soon & Updates
+# 👍 Coming Soon & Updates
 
 {% tabs %}
 {% tab title="AI" %}
@@ -60,7 +60,7 @@ description: Done and coming soon as well as updates/change logs.
 
 *   Temporary file storage
 
-    *   Save your files for a short time to work with it 
+    *   Save your files for a short time to work with it&#x20;
 
         https://api.1saas.co/v1**/fs/**
 

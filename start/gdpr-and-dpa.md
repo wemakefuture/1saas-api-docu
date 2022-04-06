@@ -1,4 +1,4 @@
-# GDPR & DPA / OnPrem Hosting
+# 🔓 GDPR & DPA / OnPrem Hosting
 
 We apply to GDPR since we are a EU based company. You can read more here:
 
@@ -6,9 +6,11 @@ We apply to GDPR since we are a EU based company. You can read more here:
 
 ### OnPrem Hosting
 
-You want to run your own instance of 1SaaS in your internal infrastructure? 
+You want to run your own instance of 1SaaS in your infrastructure?&#x20;
 
-Sure write us here: [beta1saas@1saas.co](mailto:beta1saas@1saas.co)
+Sure write us here: wecare@1saas.co
+
+
 
 
 

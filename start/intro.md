@@ -1,13 +1,7 @@
-# Intro & How-to
+# ⛓ Build an Integration
 
-Find out more in this short video what 1saas is and why it helps you to scale your low code and no code business and automations.&#x20;
+You want to integrate 1SaaS.co into your service?
 
-{% embed url="https://youtu.be/XJv1VY4HTUI" %}
+Here ([https://my.1saas.co/](https://my.1saas.co)) you can get your API key. If you are developing an integration - write us [wecare@1saas.co](https://onesaas.postman.co/workspace/Team-Workspace\~d38fc6e7-5581-4b07-8862-87a479aeef37/documentation/wecare@1saas.co) we will drop you some executions to develop the integration!
 
-Zapier:&#x20;
-
-[https://zapier.com/apps/code/integrations/1saasco](https://zapier.com/apps/code/integrations/1saasco)
-
-Integromat:
-
-[https://www.integromat.com/en/integrations/onesaas](https://www.integromat.com/en/integrations/onesaas)
+![](https://images.unsplash.com/photo-1454486837617-ce8e1ba5ebfe?crop=entropy\&cs=srgb\&fm=jpg\&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw5fHxoaWdoJTIwZml2ZXxlbnwwfHx8fDE2NDkyNzg2ODI\&ixlib=rb-1.2.1\&q=85)

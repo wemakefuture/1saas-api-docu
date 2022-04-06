@@ -2,14 +2,14 @@
 description: Get started.
 ---
 
-# Start
+# ❓ FAQ
 
-{% content-ref url="intro.md" %}
-[intro.md](intro.md)
+{% content-ref url="../" %}
+[..](../)
 {% endcontent-ref %}
 
-{% content-ref url="platform.md" %}
-[platform.md](platform.md)
+{% content-ref url="../api-documentation/platform.md" %}
+[platform.md](../api-documentation/platform.md)
 {% endcontent-ref %}
 
 {% content-ref url="help.md" %}
