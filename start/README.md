@@ -4,15 +4,22 @@ description: Get started.
 
 # ❓ FAQ
 
-{% content-ref url="../" %}
-[..](../)
+{% content-ref url="master.md" %}
+[master.md](master.md)
 {% endcontent-ref %}
 
-{% content-ref url="../api-documentation/platform.md" %}
-[platform.md](../api-documentation/platform.md)
+{% content-ref url="api-keys.md" %}
+[api-keys.md](api-keys.md)
+{% endcontent-ref %}
+
+{% content-ref url="intro.md" %}
+[intro.md](intro.md)
+{% endcontent-ref %}
+
+{% content-ref url="gdpr-and-dpa.md" %}
+[gdpr-and-dpa.md](gdpr-and-dpa.md)
 {% endcontent-ref %}
 
 {% content-ref url="help.md" %}
 [help.md](help.md)
 {% endcontent-ref %}
-
