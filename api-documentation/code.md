@@ -13,12 +13,16 @@ You can find the currently supported packages for our js endpoint:
 {% endhint %}
 
 {% hint style="info" %}
-result = { "data": YOURVARIABLE }
+There are two methods to return your result.&#x20;
 
-We will return the result in the JSON \
-{ "data": YOURVARIABLE }
+`result = { "data": YOURVARIABLE }`
 
-So please insert this at the end of your code!
+Or just:&#x20;
+
+`return { "data": YOURVARIABLE }`
+
+Both methods will return the result in the JSON \
+`{ "data": YOURVARIABLE }`
 {% endhint %}
 
 
