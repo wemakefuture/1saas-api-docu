@@ -14,7 +14,7 @@ Yes you can resell and automate as an agency for your clients. We don't mind if 
 
 You can easily use our **stripe portal** to manage your subscription. Login into 1saas and klick here:
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image (5) (1).png>)
 
 Here you can manage your subscription.
 

@@ -9,7 +9,7 @@ description: Execute code without any hassle.
 {% hint style="success" %}
 You can find the currently supported packages for our js endpoint:
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 {% endhint %}
 
 {% hint style="info" %}
@@ -52,13 +52,11 @@ Some Python Examples
 
 {% hint style="success" %}
 We have installed a set of python libaries:\
-\
-[https://raw.githubusercontent.com/wemakefuture/1saas-v2-functions-python/main/requirements.txt?token=GHSAT0AAAAAABTJB4FZRHPT46UJQGGYGEFCYSN7MQQ](https://raw.githubusercontent.com/wemakefuture/1saas-v2-functions-python/main/requirements.txt?token=GHSAT0AAAAAABTJB4FZRHPT46UJQGGYGEFCYSN7MQQ)
+![](<../.gitbook/assets/image (5).png>)
 {% endhint %}
 
-### My Package is not Working?
+### My Package is not working or missing?
 
-\
-You need more? Join our slack! And we will add them for you!
+You need more? Join our slack! **Write in our Support channel** and we will add them for you!
 
 {% embed url="https://join.slack.com/t/limitless1saasco/shared_invite/zt-10ep0xau8-fu_iMjqcw_o67~bD_zhWtw" %}
