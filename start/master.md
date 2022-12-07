@@ -22,4 +22,8 @@ At the beginning of the new billing cycle we will reactivate your subscription a
 
 YES ❤️ join our Slack and work with us to bring you new endpoints. We constantly ship new features. Every idea matters! We honor this with a 20% for our first 1000-Slackers.&#x20;
 
+{% hint style="success" %}
+You will find the discount code in the #General description - have fun!
+{% endhint %}
+
 {% embed url="https://join.slack.com/t/limitless1saasco/shared_invite/zt-10ep0xau8-fu_iMjqcw_o67~bD_zhWtw" %}
