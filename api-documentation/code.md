@@ -4,6 +4,10 @@ description: Execute code without any hassle.
 
 # 👨💻 Code Examples
 
+### Check our AI 1SaaS Code generator:
+
+[https://my.1saas.co/generate](https://my.1saas.co/generate)
+
 ### Run Javascript via API
 
 {% hint style="success" %}
