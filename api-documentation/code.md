@@ -9,7 +9,7 @@ description: Execute code without any hassle.
 {% hint style="success" %}
 You can find the currently supported packages for our js endpoint:
 
-![](<../.gitbook/assets/image (4) (1).png>)
+'lodash','crypto-js','dayjs','dayjs/plugin/duration','date-fns','date-fns/parseISO','date-fns/format','date-fns-tz','xlsx','csv','axios','dom-parse','util','airtable','moment','jsrsasign','csv-parse'
 {% endhint %}
 
 {% hint style="info" %}
