@@ -6,7 +6,11 @@ description: Execute code without any hassle.
 
 ### Check our AI 1SaaS Code generator:
 
-[https://my.1saas.co/generate](https://my.1saas.co/generate)
+\>>>
+
+{% embed url="https://my.1saas.co/generate" %}
+Generate your Code with AI for 1SaaS
+{% endembed %}
 
 ### Run Javascript via API
 
