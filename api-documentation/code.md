@@ -52,7 +52,8 @@ Some Python Examples
 
 {% hint style="success" %}
 We have installed a set of python libaries:\
-![](<../.gitbook/assets/image (5).png>)
+\
+azure-functions airtable-python-wrapper numpy pandas pendulum requests scipy ntlm-auth requests\_ntlm lxml Pillow pulp wordcloud snscrape nltk openpyxl google-api-python-client fuzzywuzzy python-Levenshtein CloudFlare praw sylk-parser python\_http\_client openai jwcrypto blowfish instaloader holidays pyairtable simplejson pybit woocommerce pygsheets pytesseract selenium imageio django pysftp pymssql gspread ccxt pydnevnikruapi psycopg2 sylk\_parser QuantStats Markdown docx beautifulsoup4 youtube\_transcript\_api airtable gpt-index PyPDF2 telebot googlemaps
 {% endhint %}
 
 ### My Package is not working or missing?
