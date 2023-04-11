@@ -17,7 +17,7 @@ Generate your Code with AI for 1SaaS
 {% hint style="success" %}
 You can find the currently supported packages for our js endpoint:
 
-'lodash','crypto-js','dayjs','dayjs/plugin/duration','date-fns','date-fns/parseISO','date-fns/format','date-fns-tz','xlsx','csv','axios','dom-parse','util','airtable','moment','jsrsasign','csv-parse'
+'lodash', 'crypto-js', 'dayjs', 'dayjs/plugin/duration', 'date-fns', 'date-fns/parseISO', 'date-fns/format', 'date-fns-tz', 'xlsx', 'csv', 'axios', 'dom-parse', 'util', 'airtable', 'moment', 'jsrsasign', 'csv-parse', 'libphonenumber', 'node-fetch'
 {% endhint %}
 
 {% hint style="info" %}
@@ -62,7 +62,7 @@ Some Python Examples
 We have installed a set of python libaries:\
 
 
-azure-functions airtable-python-wrapper numpy pandas pendulum requests scipy ntlm-auth requests\_ntlm lxml Pillow pulp wordcloud snscrape nltk openpyxl google-api-python-client fuzzywuzzy python-Levenshtein CloudFlare praw sylk-parser python\_http\_client openai jwcrypto blowfish instaloader holidays pyairtable simplejson pybit woocommerce pygsheets pytesseract selenium imageio django pysftp pymssql gspread ccxt pydnevnikruapi psycopg2 sylk\_parser QuantStats Markdown docx beautifulsoup4 youtube\_transcript\_api airtable gpt-index PyPDF2 telebot googlemaps spacy nlpcloud openai cosine-similarity embeddings pytube beautifulsoup4 pyperclip clipboard gevent pydub venmo-api isodate exif jwt pinecone-client Levenshtein elementpath
+azure-functions airtable-python-wrapper numpy pandas pendulum requests scipy ntlm-auth requests\_ntlm lxml Pillow pulp wordcloud snscrape nltk openpyxl google-api-python-client fuzzywuzzy python-Levenshtein CloudFlare praw sylk-parser python\_http\_client openai jwcrypto blowfish instaloader holidays pyairtable simplejson pybit woocommerce pygsheets pytesseract selenium imageio django pysftp pymssql gspread ccxt pydnevnikruapi psycopg2 sylk\_parser QuantStats Markdown docx beautifulsoup4 youtube\_transcript\_api airtable gpt-index PyPDF2 telebot googlemaps spacy nlpcloud openai cosine-similarity embeddings pytube beautifulsoup4 pyperclip clipboard gevent pydub venmo-api isodate exif jwt pinecone-client Levenshtein elementpath tabula empyrial Telethon pdfrw
 {% endhint %}
 
 ### IP Addresses of 1SaaS Python
