@@ -17,7 +17,7 @@ Generate your Code with AI for 1SaaS
 {% hint style="success" %}
 You can find the currently supported packages for our js endpoint:
 
-'lodash', 'crypto-js', 'dayjs', 'dayjs/plugin/duration', 'date-fns', 'date-fns/parseISO', 'date-fns/format', 'date-fns-tz', 'xlsx', 'csv', 'axios', 'dom-parse', 'util', 'airtable', 'moment', 'jsrsasign', 'csv-parse', 'libphonenumber', 'node-fetch'
+'lodash', 'crypto-js', 'dayjs', 'dayjs/plugin/duration', 'date-fns', 'date-fns/parseISO', 'date-fns/format', 'date-fns-tz', 'xlsx', 'csv', 'axios', 'cheerio', 'handlebars', 'joi', 'mustache', 'uuid', 'ulid', 'underscore', 'zod', 'yup', 'dom-parse', 'util', 'airtable', 'moment', 'jsrsasign', 'csv-parse', 'libphonenumber', 'node-fetch'
 {% endhint %}
 
 {% hint style="info" %}
