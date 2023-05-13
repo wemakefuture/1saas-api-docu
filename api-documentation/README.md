@@ -1,5 +1,5 @@
 ---
-description: API Documenation for 1SaaS.co
+description: API Documenation for 0-CodeKit (formerly 1saas.co)
 ---
 
 # 🎇 Examples and Use Cases
