@@ -27,3 +27,15 @@ You will find the discount code in the #General description - have fun!
 {% endhint %}
 
 {% embed url="https://join.slack.com/t/limitless1saasco/shared_invite/zt-10ep0xau8-fu_iMjqcw_o67~bD_zhWtw" %}
+
+### Can I purchase credits just till the next subscription period starts?
+
+Yes, Take control of your 0codekit account with our new feature allowing self-service credit top-ups! Skip waiting and manual renewals - add credits instantly anytime you need.
+
+How? Simply click "add more credits" in the credit section on your account page.
+
+With more credits, you'll have the capacity for more projects, simulations, and productivity. Explore, maximize usage, streamline workflows and empower yourself with 0codekit.
+
+Questions or feedback? We're here to assist you. Check out the new feature at [https://my.1saas.co/pricing?mode=payment.](https://my.1saas.co/pricing?mode=payment.)
+
+Your feedback drives our improvements - so, let us know what you think. Thanks for trusting us and happy coding!
