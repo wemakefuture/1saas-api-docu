@@ -11,4 +11,4 @@
 * [🎇 Examples and Use Cases](api-documentation/README.md)
   * [🤩 Use Cases](api-documentation/platform.md)
   * [👨💻 Code Examples](api-documentation/code.md)
-* [🛣 Road Map](coming-soon.md)
+* [🛣 Road Map and Feature Request](coming-soon.md)
