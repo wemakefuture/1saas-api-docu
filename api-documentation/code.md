@@ -58,6 +58,8 @@ Here you can find some examples:&#x20;
 Some Python Examples
 {% endembed %}
 
+#### Python libraries
+
 {% hint style="success" %}
 We have installed a set of python libaries:\
 
@@ -65,7 +67,7 @@ We have installed a set of python libaries:\
 azure-functions requests airtable-python-wrapper numpy pandas pendulum requests scipy ntlm-auth requests\_ntlm lxml Pillow pulp wordcloud snscrape nltk openpyxl google-api-python-client fuzzywuzzy python-Levenshtein CloudFlare praw sylk-parser python\_http\_client openai jwcrypto blowfish instaloader holidays pyairtable simplejson pybit woocommerce pygsheets pytesseract selenium imageio django pysftp gspread ccxt pydnevnikruapi psycopg2 sylk\_parser QuantStats Markdown docx beautifulsoup4 youtube\_transcript\_api airtable gpt-index PyPDF2 telebot googlemaps spacy nlpcloud openai cosine-similarity embeddings pytube beautifulsoup4 pyperclip clipboard gevent pydub venmo-api isodate exif jwt pinecone-client Levenshtein gspread\_dataframe google-auth elementpath tabula empyrial Telethon pdfrw opencv-contrib-python-headless cohere stripe pyshorteners feedparser langchain langchain\_experimental chromadb hnswlib PyPDF2 tqdm tenacity pycryptodome PyMuPDF openpyxl pysftp pdfkit requests-ntlm pymysql
 {% endhint %}
 
-### IP Addresses of 1SaaS Python
+### IP Addresses of 0-CodedKit Python
 
 {% hint style="success" %}
 Also, in case of needing them these are our IP addresses you can use in you code:
