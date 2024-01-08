@@ -18,9 +18,7 @@ We are pretty active in Slack and you can join our community there.
 
 ### Custom Code Support?
 
-We cannot offer custom code help. If you need help with your python or js script - post it on the community or reach out to our consulting partner.
-
-{% embed url="https://makeitfuture.com/contact" %}
+We offer code support via our community. Join [Slack community](https://join.slack.com/t/limitless1saasco/shared\_invite/zt-10ep0xau8-fu\_iMjqcw\_o67\~bD\_zhWtw).&#x20;
 
 {% hint style="success" %}
 If you need a package? Check this -->&#x20;
