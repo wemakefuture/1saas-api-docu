@@ -6,7 +6,7 @@
   * [🔑 API Keys & Account](start/api-keys.md)
   * [⛓️ Build an Integration](start/intro.md)
   * [🔓 GDPR & DPA / OnPrem Hosting](start/gdpr-and-dpa.md)
-  * [🆘 Help](start/help.md)
+  * [🆘 Help Desk](start/help.md)
 * [👓 API Documentation](https://documenter.getpostman.com/view/18297710/UVkntwBv)
 * [🎇 Examples and Use Cases](api-documentation/README.md)
   * [🤩 Use Cases](api-documentation/platform.md)

@@ -1,18 +1,24 @@
-# 🆘 Help
+# 🆘 Help Desk
 
-## Support?
+## Support
 
-Where can I get support for 1saas?
+Where can I get support for 0CodeKit?
 
-### Channel:
+### Create a support ticket
 
-Currently we are in feedback here.
+Create a ticket, powered by ClickUp, that will be immediately added to our product's backlog.
+
+{% embed url="http://lyl.ai/create-ticket" %}
+Our first-priority support channel
+{% endembed %}
+
+### Community channels:
+
+For feedback and community support, check out our Slack channels.
 
 {% embed url="https://join.slack.com/t/limitless1saasco/shared_invite/zt-10ep0xau8-fu_iMjqcw_o67~bD_zhWtw" %}
 Join us and get 20% Discount!
 {% endembed %}
-
-We are pretty active in Slack and you can join our community there.
 
 
 
