@@ -1,8 +1,13 @@
 ---
-description: API Documentation of 0CodeKit
+description: Up-to-date API Documentation of 0CodeKit.
+icon: book-blank
 ---
 
 # API Documentation
+
+## Remarks
+
+Previous documentation on Postman can still be found [here](https://documenter.getpostman.com/view/18297710/UVkntwBv) but is no longer maintained.
 
 ## Authentication
 
