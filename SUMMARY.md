@@ -13,3 +13,4 @@
   * [👨‍💻 Code Examples](api-documentation/code.md)
 * [🛣️ Road Map and Feature Request](coming-soon.md)
 * [🤝 Service Level Agreement](service-level-agreement.md)
+* [API Documentation](api-documentation-1.md)
