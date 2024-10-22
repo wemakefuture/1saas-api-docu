@@ -4,7 +4,7 @@ description: Execute code without any hassle.
 
 # 👨💻 Code Examples
 
-### Check our AI 0-CodeKit (formerly 1saas.co) Code generator:
+### Check our AI 0CodeKit Code generator:
 
 \>>>
 
