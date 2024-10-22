@@ -2,7 +2,7 @@
 
 Keep this key confidential. You can see after signup the key under your account tab:
 
-![Your 0-CodeKit (formerly 1saas.co) API Key.](<../.gitbook/assets/image (2).png>)
+![Your 0CodeKit API Key.](<../.gitbook/assets/image (2).png>)
 
 ### Can I use the Key for my Customers?
 
