@@ -71,7 +71,7 @@ requests airtable-python-wrapper numpy boto3 pandas pendulum whisper requests sc
 
 {% embed url="https://0codekit.canny.io/" %}
 
-### IP Addresses of 0-CodedKit Python
+### IP Addresses of 0CodedKit Python
 
 {% hint style="success" %}
 Also, in case of needing them these are our IP addresses you can use in you code:
