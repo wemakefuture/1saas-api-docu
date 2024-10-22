@@ -2,7 +2,7 @@
 description: >-
   We are aiming to be the service you use instead of 1.000s of APIs over a
   NoCode, LowCode or Coder life cycle. We provide a GUI-less service which you
-  can access via Integromat, N8N, Zapier or API.
+  can access via Make, N8N, Zapier or API.
 ---
 
 # 😎 Getting Started
