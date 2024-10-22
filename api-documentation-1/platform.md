@@ -4,7 +4,7 @@ description: Some ideas - we will add more!
 
 # 🤩 Use Cases
 
-How to run Code in Integromat How to run Python or Javascript in Integromat, n8n and free in Zapier?
+How to run Code in Integromat How to run Python or Javascript in Make, n8n and free in Zapier?
 
 {% embed url="https://youtu.be/o3IolXO5Hwg" %}
 Run Code in Integromat, Zapier & N8N
