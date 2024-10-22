@@ -1,6 +1,6 @@
 ---
-description: Up-to-date API Documentation of 0CodeKit.
 icon: book-blank
+description: Up-to-date API Documentation of 0CodeKit.
 ---
 
 # API Documentation
@@ -16,6 +16,10 @@ Include a key:value pair in the header of the request, where the key is `auth` a
 For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 
 ## Functions
+
+{% swagger src=".gitbook/assets/api.json" path="/ai/advancedocr" method="post" %}
+[api.json](.gitbook/assets/api.json)
+{% endswagger %}
 
 {% swagger src=".gitbook/assets/openapi.json" path="/ai/detectadultcontent" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
@@ -143,6 +147,10 @@ For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 
 {% swagger src=".gitbook/assets/openapi.json" path="/operator/advancedswitch" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
+{% endswagger %}
+
+{% swagger src=".gitbook/assets/api.json" path="/operator/trafficlight" method="post" %}
+[api.json](.gitbook/assets/api.json)
 {% endswagger %}
 
 {% swagger src=".gitbook/assets/openapi.json" path="/operator/splitname" method="post" %}
