@@ -7,6 +7,6 @@ description: >-
 
 # 😎 Getting Started
 
-Find out more in this short video what 0-CodeKit (formerly 1saas.co) is and why it helps you to scale your low code and no code business and automations.&#x20;
+Find out more in this short video what 0CodeKit (formerly 1saas.co) is and why it helps you to scale your low code and no code business and automations.&#x20;
 
-{% embed url="https://www.youtube.com/watch?v=QYJr-GbgS_A" %}
+{% embed url="https://www.youtube.com/watch?v=5d22iOEf2Yw" %}
