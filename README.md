@@ -1,12 +1,11 @@
 ---
 description: >-
-  We are aiming to be the service you use instead of 1.000s of APIs over a
-  NoCode, LowCode or Coder life cycle. We provide a GUI-less service which you
-  can access via Make, N8N, Zapier or API.
+  0CodeKit brings you the missing building block for all your projects when
+  working with low-code, no-code, APIs and automation. #BreakLimits
 ---
 
 # 😎 Getting Started
 
-Find out more in this short video what 0CodeKit is and why it helps you to scale your low code and no code business and automations.&#x20;
+Find out more in this short video what 0CodeKit is and how to set up your account.
 
 {% embed url="https://www.youtube.com/watch?v=5d22iOEf2Yw" %}
