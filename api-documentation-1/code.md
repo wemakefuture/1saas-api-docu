@@ -1,8 +1,9 @@
 ---
 description: Effortlessly execute code with zero complications.
+icon: code
 ---
 
-# 👨‍💻 Code Examples
+# Code Examples
 
 ### Check out our Code Editor:
 

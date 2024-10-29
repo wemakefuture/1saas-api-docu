@@ -1,4 +1,8 @@
-# 🆘 Help Desk
+---
+icon: square-info
+---
+
+# Help Desk
 
 ## Support
 

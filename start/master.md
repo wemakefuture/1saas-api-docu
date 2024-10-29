@@ -1,4 +1,8 @@
-# 👏 Credits, Account & Prices
+---
+icon: coin
+---
+
+# Credits, Account & Prices
 
 Can I use 0CodeKit for free?
 

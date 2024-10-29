@@ -1,4 +1,8 @@
-# 🎇 Examples and Use Cases
+---
+icon: lightbulb-exclamation
+---
+
+# Examples and Use Cases
 
 ### Endpoints documentation
 

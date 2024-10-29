@@ -1,4 +1,8 @@
-# ⛓️ Build an Integration
+---
+icon: chart-network
+---
+
+# Build an Integration
 
 You want to integrate 0CodeKit into your service?
 

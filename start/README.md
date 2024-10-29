@@ -1,8 +1,9 @@
 ---
 description: Frequently Asked Questions
+icon: question
 ---
 
-# ❓ FAQ
+# FAQ
 
 {% content-ref url="master.md" %}
 [master.md](master.md)

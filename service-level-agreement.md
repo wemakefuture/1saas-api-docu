@@ -1,4 +1,8 @@
-# 🤝 Service Level Agreement
+---
+icon: handshake
+---
+
+# Service Level Agreement
 
 ### Service Level Agreement (SLA) - 0CodeKit
 

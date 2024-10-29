@@ -1,4 +1,8 @@
-# 🤩 Use Cases & Tutorials
+---
+icon: suitcase
+---
+
+# Use Cases & Tutorials
 
 How to run custom Code in Make using 0CodeKit.
 

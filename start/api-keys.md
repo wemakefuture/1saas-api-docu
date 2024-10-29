@@ -1,4 +1,8 @@
-# 🔑 API Keys
+---
+icon: key-skeleton
+---
+
+# API Keys
 
 Keep this key confidential. You can see after signup the key under your account tab:
 
