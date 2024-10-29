@@ -26,27 +26,19 @@ Join us and get 20% Discount!
 
 We offer code support via our community. Join [Slack community](https://join.slack.com/t/limitless1saasco/shared\_invite/zt-10ep0xau8-fu\_iMjqcw\_o67\~bD\_zhWtw).&#x20;
 
-{% hint style="success" %}
-If you need a package? Check this -->&#x20;
-
-Your package is not working? Join our slack! And we will add them for you!
-
-[https://join.slack.com/t/limitless1saasco/shared\_invite/zt-10ep0xau8-fu\_iMjqcw\_o67\~bD\_zhWtw](https://join.slack.com/t/limitless1saasco/shared\_invite/zt-10ep0xau8-fu\_iMjqcw\_o67\~bD\_zhWtw)
-{% endhint %}
-
 If you run into bugs because of your code maybe this helps:
 
 {% hint style="info" %}
 Keep in mind:&#x20;
 
+1. You need to **create the object** that you want to return**.**&#x20;
+2. You need to store the object in a variable called **result**.
+3. NO console.log/print, values printed to the console won't be returned, just the result object (Step 1 and 2)
 
+Check the examples below.\
 
-You need to **create the object.** Check these examples: \
-\
-NO Console Log\
-NO Return
 {% endhint %}
 
-Check this video:
+Common problems with code executors:
 
 {% embed url="https://www.youtube.com/watch?v=pKjBcL5cDDo" %}

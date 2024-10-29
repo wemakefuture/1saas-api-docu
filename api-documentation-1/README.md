@@ -1,11 +1,9 @@
----
-description: API Documenation for 0-CodeKit (formerly 1saas.co)
----
-
 # 🎇 Examples and Use Cases
 
-### Overview of the API endpoints?
+### Endpoints documentation
 
-Get a fast over view in our Postman Collection.
+Checkout our REST API Documentation for more examples.
 
-{% embed url="https://documenter.getpostman.com/view/18297710/UVkntwBv#intro" %}
+{% content-ref url="../api-documentation.md" %}
+[api-documentation.md](../api-documentation.md)
+{% endcontent-ref %}

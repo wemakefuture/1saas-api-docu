@@ -1,20 +1,12 @@
----
-description: Some ideas - we will add more!
----
+# 🤩 Use Cases & Tutorials
 
-# 🤩 Use Cases
+How to run custom Code in Make using 0CodeKit.
 
-How to run Code in Integromat How to run Python or Javascript in Make, n8n and free in Zapier?
+{% embed url="https://youtu.be/YVg7I8RedNA?feature=shared" %}
 
-{% embed url="https://youtu.be/o3IolXO5Hwg" %}
-Run Code in Integromat, Zapier & N8N
-{% endembed %}
+How to switch and select values with 0CodeKit.
 
-How to switch and select values in Integromat Zapier or N8N
-
-{% embed url="https://youtu.be/-nnxLAYIIns" %}
-Switching in Integromat and Zapier
-{% endembed %}
+{% embed url="https://youtu.be/Fdl0ZHEjm3A?feature=shared" %}
 
 Weekend & Weekday Detection via API Identify the weekday or weekend in Integromat Zapier n8n
 

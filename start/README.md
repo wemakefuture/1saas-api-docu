@@ -1,5 +1,5 @@
 ---
-description: Get started.
+description: Frequently Asked Questions
 ---
 
 # ❓ FAQ
