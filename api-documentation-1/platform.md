@@ -14,9 +14,7 @@ How to switch and select values with 0CodeKit.
 
 Weekend & Weekday Detection via API Identify the weekday or weekend in Integromat Zapier n8n
 
-{% embed url="https://youtu.be/3htPyqTNmX4" %}
-Weekend & Weekday Detection
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=ztcPu1iLwGY" %}
 
 Ever wanted to have a way to detect content of images.
 
