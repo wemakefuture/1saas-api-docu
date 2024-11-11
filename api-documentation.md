@@ -397,10 +397,6 @@ For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
 
-{% swagger src=".gitbook/assets/openapi.json" path="/python-b2" method="post" %}
-[openapi.json](.gitbook/assets/openapi.json)
-{% endswagger %}
-
 {% swagger src=".gitbook/assets/openapi.json" path="/taskstatus" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
