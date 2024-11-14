@@ -12,15 +12,13 @@ How to switch and select values with 0CodeKit.
 
 {% embed url="https://youtu.be/Fdl0ZHEjm3A?feature=shared" %}
 
-Weekend & Weekday Detection via API Identify the weekday or weekend in Integromat Zapier n8n
+Weekend & Weekday Detection via API Identify the weekday or weekend on Make.
 
 {% embed url="https://www.youtube.com/watch?v=ztcPu1iLwGY" %}
 
-Ever wanted to have a way to detect content of images.
+Detect objects and entities in an image using AI.
 
-{% embed url="https://youtu.be/sIUI187vQSg" %}
-Easyly detect image content
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=e5xjJCOPyvw" %}
 
 Verify and Correct Email in Integromat Zapier N8N or API
 
