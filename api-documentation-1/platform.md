@@ -20,8 +20,6 @@ Detect objects and entities in an image using AI.
 
 {% embed url="https://www.youtube.com/watch?v=e5xjJCOPyvw" %}
 
-Verify and Correct Email in Integromat Zapier N8N or API
+Verify and Correct Email using 0CodeKit.
 
-{% embed url="https://youtu.be/nq6MYNnwvOw" %}
-Verify and Correct Email
-{% endembed %}
+{% embed url="https://youtu.be/WFPStgFjc2U?feature=shared" %}
