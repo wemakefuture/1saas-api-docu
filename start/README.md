@@ -1,6 +1,6 @@
 ---
-description: Frequently Asked Questions
 icon: question
+description: Frequently Asked Questions
 ---
 
 # FAQ
@@ -17,8 +17,8 @@ icon: question
 [intro.md](intro.md)
 {% endcontent-ref %}
 
-{% content-ref url="gdpr-and-dpa.md" %}
-[gdpr-and-dpa.md](gdpr-and-dpa.md)
+{% content-ref url="../about-us/gdpr-and-dpa.md" %}
+[gdpr-and-dpa.md](../about-us/gdpr-and-dpa.md)
 {% endcontent-ref %}
 
 {% content-ref url="help.md" %}
