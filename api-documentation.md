@@ -9,6 +9,10 @@ description: Up-to-date API Documentation of 0CodeKit.
 
 Previous documentation on Postman can still be found [here](https://documenter.getpostman.com/view/18297710/UVkntwBv) but is no longer maintained.
 
+## Base URL
+
+`https://prod.0codekit.com`
+
 ## Authentication
 
 Include a key:value pair in the header of the request, where the key is `auth` and the value your API key that can be obtained in [your 0CodeKit account portal](https://www.0codekit.com/).
@@ -397,15 +401,24 @@ For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
 
+{% swagger src=".gitbook/assets/openapi.json" path="/python" method="post" %}
+[openapi.json](.gitbook/assets/openapi.json)
+{% endswagger %}
+
+{% hint style="warning" %}
+**Note on the Asynchronous Python Code Executor Pricing**
+
+The cost of the asynchronous Python code executor is proportional to that of the regular synchronous Python executor. The key difference is that the asynchronous endpoint allows your code to run up to **5 times longer**, with a maximum total runtime of **15 minutes**.
+
+* Charges are applied every **3 minutes**, which is the standard execution time increment for the synchronous Python executor.
+* You are charged for each 3-minute interval (or part thereof) that your code runs asynchronously.
+{% endhint %}
+
 {% swagger src=".gitbook/assets/openapi.json" path="/async-python" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
 
 {% swagger src=".gitbook/assets/openapi.json" path="/javascript" method="post" %}
-[openapi.json](.gitbook/assets/openapi.json)
-{% endswagger %}
-
-{% swagger src=".gitbook/assets/openapi.json" path="/python" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
 
