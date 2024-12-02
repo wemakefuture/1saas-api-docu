@@ -6,7 +6,7 @@ icon: coin
 
 Can I use 0CodeKit for free?
 
-Yes, the standard free account includes 250 credits per month**.**
+Yes, the standard free account includes 250 credits per mont&#x68;**.**
 
 By signing up here: [(https://my.0codekit.com/en/auth/login)](https://my.1saas.co) you automatically get 250 credits for free every month!
 

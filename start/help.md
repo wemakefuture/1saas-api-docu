@@ -28,14 +28,14 @@ Join us and get 20% Discount!
 
 ### Custom Code Support?
 
-We offer code support via our community. Join [Slack community](https://join.slack.com/t/limitless1saasco/shared\_invite/zt-10ep0xau8-fu\_iMjqcw\_o67\~bD\_zhWtw).&#x20;
+We offer code support via our community. Join [Slack community](https://join.slack.com/t/limitless1saasco/shared_invite/zt-10ep0xau8-fu_iMjqcw_o67~bD_zhWtw).&#x20;
 
 If you run into bugs because of your code maybe this helps:
 
 {% hint style="info" %}
 Keep in mind:&#x20;
 
-1. You need to **create the object** that you want to return**.**&#x20;
+1. You need to **create the object** that you want to retur&#x6E;**.**&#x20;
 2. You need to store the object in a variable called **result**.
 3. NO console.log/print, values printed to the console won't be returned, just the result object (Step 1 and 2)
 

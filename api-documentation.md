@@ -21,6 +21,18 @@ For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 [api.json](.gitbook/assets/api.json)
 {% endswagger %}
 
+{% swagger src=".gitbook/assets/docs.json" path="/ai/extract-from-text" method="post" %}
+[docs.json](.gitbook/assets/docs.json)
+{% endswagger %}
+
+{% swagger src=".gitbook/assets/docs.json" path="/ai/fuzzy-match" method="post" %}
+[docs.json](.gitbook/assets/docs.json)
+{% endswagger %}
+
+{% swagger src=".gitbook/assets/docs.json" path="/ai/redact-pdf" method="post" %}
+[docs.json](.gitbook/assets/docs.json)
+{% endswagger %}
+
 {% swagger src=".gitbook/assets/openapi.json" path="/ai/detectadultcontent" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
