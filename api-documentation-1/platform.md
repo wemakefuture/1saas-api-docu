@@ -23,3 +23,8 @@ Detect objects and entities in an image using AI.
 Verify and Correct Email using 0CodeKit.
 
 {% embed url="https://youtu.be/WFPStgFjc2U?feature=shared" %}
+
+Detect text in an image using AI.
+
+{% embed url="https://youtu.be/StzrOabny4k?si=ycwsUb9Fz0_tK3-M" %}
+
