@@ -189,6 +189,10 @@ For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
 
+{% swagger src=".gitbook/assets/docs (1).json" path="/operator/merge-video-audio" method="post" %}
+[docs (1).json](<.gitbook/assets/docs (1).json>)
+{% endswagger %}
+
 {% swagger src=".gitbook/assets/openapi.json" path="/convert/nationiso" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
@@ -243,6 +247,14 @@ For example: `auth:a4c3dcc5-8e41-4cad-bd5f-c24086baba00`
 
 {% swagger src=".gitbook/assets/openapi.json" path="/business/verify/domain" method="post" %}
 [openapi.json](.gitbook/assets/openapi.json)
+{% endswagger %}
+
+{% swagger src=".gitbook/assets/docs (1).json" path="/business/facturx/validate" method="post" %}
+[docs (1).json](<.gitbook/assets/docs (1).json>)
+{% endswagger %}
+
+{% swagger src=".gitbook/assets/docs (1).json" path="/business/facturx/embed" method="post" %}
+[docs (1).json](<.gitbook/assets/docs (1).json>)
 {% endswagger %}
 
 {% swagger src=".gitbook/assets/openapi.json" path="/storage/temp" method="post" %}
