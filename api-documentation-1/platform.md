@@ -28,3 +28,9 @@ Detect text in an image using AI.
 
 {% embed url="https://youtu.be/StzrOabny4k?si=ycwsUb9Fz0_tK3-M" %}
 
+Translate text using 0CodeKit.
+
+{% embed url="https://youtu.be/r8sP_zMsWb0?si=DXg1rxLq1Be4OU6W" %}
+
+
+
