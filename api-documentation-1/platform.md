@@ -34,3 +34,7 @@ Translate text using 0CodeKit.
 
 
 
+Summarize PDF and image documents using 0CodeKit
+
+{% embed url="https://youtu.be/u_-zZ6ktVmk?si=p4iU2uiJF0rdrFut" %}
+
