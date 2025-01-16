@@ -7,7 +7,9 @@ description: Up-to-date API Documentation of 0CodeKit.
 
 ## Remarks
 
-Previous documentation on Postman can still be found [here](https://documenter.getpostman.com/view/18297710/UVkntwBv) but is no longer maintained.
+{% hint style="warning" %}
+This document is no longer maintained. Please, use [this URL](https://swagger.0codekit.com/index.html?url=https://prod.0codekit.com/docs#/) to visit our up-to-date OpenAPI documentation.
+{% endhint %}
 
 ## Base URL
 
