@@ -38,3 +38,11 @@ Summarize PDF and image documents using 0CodeKit
 
 {% embed url="https://youtu.be/u_-zZ6ktVmk?si=p4iU2uiJF0rdrFut" %}
 
+Transcribe audio files with 0CodeKit
+
+{% embed url="https://youtu.be/d16jsQyWw8Q?si=wrqOKtJrG44ST0Qc" %}
+
+Use AI to redact sensitive information from PDF documents.
+
+{% embed url="https://www.youtube.com/watch?v=FqMcQ2wT0pQ" %}
+
