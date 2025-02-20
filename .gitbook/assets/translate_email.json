@@ -1,0 +1,533 @@
+{
+    "name": "Translate Emails_@cchelagat",
+    "flow": [
+        {
+            "id": 5,
+            "module": "google-email:TriggerNewEmail",
+            "version": 2,
+            "parameters": {
+                "account": 2798918,
+                "searchType": "simple",
+                "markSeen": false,
+                "maxResults": 2,
+                "folder": "[Gmail]/All Mail",
+                "criteria": "ALL",
+                "from": "",
+                "subject": "",
+                "text": ""
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 368,
+                    "y": 6
+                },
+                "restore": {
+                    "parameters": {
+                        "account": {
+                            "label": "My Google Connection (catherine.chelagat@student.moringaschool.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            }
+                        },
+                        "searchType": {
+                            "label": "Simple filter"
+                        },
+                        "folder": {
+                            "path": [
+                                "All Mail"
+                            ]
+                        },
+                        "criteria": {
+                            "label": "All emails"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "searchType",
+                        "type": "select",
+                        "label": "Filter type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "simple",
+                                "gmail"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "markSeen",
+                        "type": "boolean",
+                        "label": "Mark email message(s) as read when fetched"
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "uinteger",
+                        "label": "Maximum number of results",
+                        "required": true
+                    },
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "criteria",
+                        "type": "select",
+                        "label": "Criteria",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "ALL",
+                                "SEEN",
+                                "UNSEEN"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "email",
+                        "label": "Sender email address"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Search phrase"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 6,
+            "module": "onesaas:ailanguagedetection",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 2798940
+            },
+            "mapper": {
+                "text": "{{5.text}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 668,
+                    "y": 6
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My 0-CodeKit connection (Kate)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Text",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "onesaas:aitranslate",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 2798940
+            },
+            "filter": {
+                "name": "If text is not English",
+                "conditions": [
+                    [
+                        {
+                            "a": "{{6.name}}",
+                            "o": "text:notequal:ci",
+                            "b": "English"
+                        }
+                    ]
+                ]
+            },
+            "mapper": {
+                "textToTranslate": "{{5.text}}",
+                "resultLang": "en"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 968,
+                    "y": 6
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My 0-CodeKit connection (Kate)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose",
+                            "collapsed": true
+                        },
+                        "resultLang": {
+                            "mode": "chose",
+                            "label": "English"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "textToTranslate",
+                        "type": "text",
+                        "label": "Text",
+                        "required": true
+                    },
+                    {
+                        "name": "resultLang",
+                        "type": "select",
+                        "label": "Result Language",
+                        "required": true
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 8,
+            "module": "email:ActionSendEmail",
+            "version": 7,
+            "parameters": {
+                "account": 2798918,
+                "saveAfterSent": false
+            },
+            "mapper": {
+                "to": [
+                    "{{5.headers.deliveredTo}}"
+                ],
+                "subject": "Translated Text",
+                "contentType": "text",
+                "attachments": [],
+                "cc": [],
+                "bcc": [],
+                "from": "",
+                "sender": "",
+                "replyTo": "",
+                "inReplyTo": "",
+                "references": [],
+                "priority": "normal",
+                "headers": [],
+                "text": "{{7.translation}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1268,
+                    "y": 6
+                },
+                "restore": {
+                    "parameters": {
+                        "account": {
+                            "label": "My Google Connection (catherine.chelagat@student.moringaschool.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            }
+                        },
+                        "saveAfterSent": {
+                            "label": "No"
+                        }
+                    },
+                    "expect": {
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "contentType": {
+                            "label": "Plaintext"
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        },
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "references": {
+                            "mode": "chose"
+                        },
+                        "priority": {
+                            "label": "Normal"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:smtp,google-restricted,microsoft-smtp-imap",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "saveAfterSent",
+                        "type": "select",
+                        "label": "Save message after sending",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "to",
+                        "type": "array",
+                        "label": "To",
+                        "required": true,
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "select",
+                        "label": "Content Type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "html",
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "array",
+                        "label": "Attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "label": "File name",
+                                "type": "filename",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "label": "Data",
+                                "type": "buffer",
+                                "required": true,
+                                "semantic": "file:data"
+                            },
+                            {
+                                "name": "cid",
+                                "label": "Content-ID",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "cc",
+                        "type": "array",
+                        "label": "Copy recipient",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        }
+                    },
+                    {
+                        "name": "bcc",
+                        "type": "array",
+                        "label": "Blind copy recipient",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "text",
+                        "label": "From"
+                    },
+                    {
+                        "name": "sender",
+                        "type": "text",
+                        "label": "Sender"
+                    },
+                    {
+                        "name": "replyTo",
+                        "type": "text",
+                        "label": "Reply-To"
+                    },
+                    {
+                        "name": "inReplyTo",
+                        "type": "text",
+                        "label": "In-Reply-To"
+                    },
+                    {
+                        "name": "references",
+                        "type": "array",
+                        "label": "References",
+                        "spec": {
+                            "type": "text",
+                            "label": "Reference",
+                            "required": true,
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "priority",
+                        "type": "select",
+                        "label": "Priority",
+                        "validate": {
+                            "enum": [
+                                "high",
+                                "normal",
+                                "low"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "type": "array",
+                        "label": "Headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "label": "Key",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Content"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.make.com"
+    }
+}

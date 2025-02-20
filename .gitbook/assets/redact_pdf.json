@@ -1,0 +1,392 @@
+{
+    "name": "redact_pdf",
+    "flow": [
+        {
+            "id": 19,
+            "module": "dropbox:createShareLink",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 2889426
+            },
+            "mapper": {
+                "select": "file",
+                "settings": {
+                    "access": "max",
+                    "require_password": false,
+                    "allow_download": true
+                },
+                "select_1": "file",
+                "path": "/university/source-documents/agreement_example.pdf"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -34,
+                    "y": 47
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Dropbox connection (slema@wemakefuture.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "select": {
+                            "label": "Select a file/folder"
+                        },
+                        "settings": {
+                            "nested": {
+                                "access": {
+                                    "mode": "chose",
+                                    "label": "Max Access"
+                                },
+                                "require_password": {
+                                    "mode": "chose"
+                                },
+                                "allow_download": {
+                                    "mode": "chose"
+                                },
+                                "requested_visibility": {
+                                    "mode": "chose",
+                                    "label": "Empty"
+                                }
+                            }
+                        },
+                        "select_1": {
+                            "label": "File"
+                        },
+                        "path": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Way of selecting files",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "file"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "settings",
+                        "type": "collection",
+                        "label": "Settings",
+                        "spec": [
+                            {
+                                "name": "access",
+                                "type": "select",
+                                "label": "Link's Access Level",
+                                "validate": {
+                                    "enum": [
+                                        "viewer",
+                                        "editor",
+                                        "max"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "expires",
+                                "type": "date",
+                                "label": "Link's Expiration Date",
+                                "time": true
+                            },
+                            {
+                                "name": "require_password",
+                                "type": "boolean",
+                                "label": "Require Password"
+                            },
+                            {
+                                "name": "link_password",
+                                "type": "text",
+                                "label": "Link's Password"
+                            },
+                            {
+                                "name": "allow_download",
+                                "type": "boolean",
+                                "label": "Allow Download"
+                            },
+                            {
+                                "name": "requested_visibility",
+                                "type": "select",
+                                "label": "Requested Visibility (Deprecated)",
+                                "validate": {
+                                    "enum": [
+                                        "public",
+                                        "team_only",
+                                        "password"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "select_1",
+                        "type": "select",
+                        "label": "Select",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "file",
+                                "folder"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "path",
+                        "type": "file",
+                        "label": "File",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 20,
+            "module": "onesaas:redactPdf",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 2940965
+            },
+            "mapper": {
+                "url": "{{19.downloadUrl}}",
+                "sensitiveContent": "Should be considered sensitive:\n- Names (from both people and companies)\n- Addresses\n- Money values and currency symbols",
+                "fileName": "redacted_{{19.name}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 266,
+                    "y": 47
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Santi2",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "PDF File URL",
+                        "required": true
+                    },
+                    {
+                        "name": "sensitiveContent",
+                        "type": "text",
+                        "label": "Definition of Sensitive Content",
+                        "required": true
+                    },
+                    {
+                        "name": "language",
+                        "type": "text",
+                        "label": "Language"
+                    },
+                    {
+                        "name": "fileName",
+                        "type": "text",
+                        "label": "File Name"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "module": "http:ActionGetFile",
+            "version": 3,
+            "parameters": {
+                "handleErrors": false
+            },
+            "mapper": {
+                "url": "{{20.url}}",
+                "serializeUrl": false,
+                "method": "get",
+                "shareCookies": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 566,
+                    "y": 47
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "hidden",
+                        "label": "Method"
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "module": "dropbox:uploadLargeFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 2889426
+            },
+            "mapper": {
+                "path": "/destination-documents",
+                "filename": "{{20.fileName}}",
+                "data": "{{22.data}}",
+                "overwrite": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 866,
+                    "y": 47
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Dropbox connection (slema@wemakefuture.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "path": {
+                            "mode": "chose"
+                        },
+                        "overwrite": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Data",
+                        "required": true
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": "boolean",
+                        "label": "Overwrite an existing file",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.make.com"
+    }
+}

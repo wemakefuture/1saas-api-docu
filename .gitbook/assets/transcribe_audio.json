@@ -1,0 +1,464 @@
+{
+    "name": "Transcribe audio file and create document_@cchelagat",
+    "flow": [
+        {
+            "id": 3,
+            "module": "google-drive:shareAFileFolder",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 2798918
+            },
+            "mapper": {
+                "file": "/1B7l4kKbiJoWW0ReojlpqVos5QIgMZUYR/1h4oD54voxwHJBCngLKnuYtsXmxGTbiHV",
+                "role": "reader",
+                "type": "anyone",
+                "select": "file",
+                "destination": "drive",
+                "allowFileDiscovery": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "file": {
+                            "mode": "chose",
+                            "path": [
+                                "0CodeKit ",
+                                "Swahili 1.mp3"
+                            ]
+                        },
+                        "role": {
+                            "mode": "chose",
+                            "label": "Reader"
+                        },
+                        "type": {
+                            "mode": "chose",
+                            "label": "Anyone"
+                        },
+                        "select": {
+                            "label": "File"
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        },
+                        "allowFileDiscovery": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Connection (catherine.chelagat@student.moringaschool.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "type": "hidden"
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "file",
+                                "folder"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "role",
+                        "type": "select",
+                        "label": "Role",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "owner",
+                                "writer",
+                                "commenter",
+                                "reader"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "type": "select",
+                        "label": "Type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "user",
+                                "group",
+                                "domain",
+                                "anyone"
+                            ]
+                        }
+                    },
+                    {
+                        "mode": "edit",
+                        "name": "file",
+                        "type": "file",
+                        "label": "File ID",
+                        "required": true
+                    },
+                    {
+                        "name": "allowFileDiscovery",
+                        "type": "boolean",
+                        "label": "Allow File Discovery",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "fileId",
+                        "type": "text",
+                        "label": "File ID"
+                    },
+                    {
+                        "name": "kind",
+                        "type": "text",
+                        "label": "Kind"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "Permission ID"
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "label": "Type"
+                    },
+                    {
+                        "name": "shareLink",
+                        "type": "url",
+                        "label": "Share Link"
+                    },
+                    {
+                        "name": "emailAddress",
+                        "type": "text",
+                        "label": "Email Address"
+                    },
+                    {
+                        "name": "domain",
+                        "type": "text",
+                        "label": "Domain"
+                    },
+                    {
+                        "name": "role",
+                        "type": "text",
+                        "label": "Role"
+                    },
+                    {
+                        "name": "allowFileDiscovery",
+                        "type": "boolean",
+                        "label": "Allow File Discovery"
+                    },
+                    {
+                        "name": "displayName",
+                        "type": "text",
+                        "label": "Display Name"
+                    },
+                    {
+                        "name": "photoLink",
+                        "type": "text",
+                        "label": "Photo Link"
+                    },
+                    {
+                        "name": "expirationTime",
+                        "type": "date",
+                        "label": "Expiration Time"
+                    },
+                    {
+                        "name": "teamDrivePermissionDetails",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "teamDrivePermissionType",
+                                    "type": "text",
+                                    "label": "Team Drive Permission Type"
+                                },
+                                {
+                                    "name": "role",
+                                    "type": "text",
+                                    "label": "Role"
+                                },
+                                {
+                                    "name": "inheritedFrom",
+                                    "type": "text",
+                                    "label": "Inherited From"
+                                },
+                                {
+                                    "name": "inherited",
+                                    "type": "boolean",
+                                    "label": "Inherited"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array",
+                        "label": "Team Drive Permission Details"
+                    },
+                    {
+                        "name": "permissionDetails",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "permissionType",
+                                    "type": "text",
+                                    "label": "Permission Type"
+                                },
+                                {
+                                    "name": "role",
+                                    "type": "text",
+                                    "label": "Role"
+                                },
+                                {
+                                    "name": "inheritedFrom",
+                                    "type": "text",
+                                    "label": "Inherited From"
+                                },
+                                {
+                                    "name": "inherited",
+                                    "type": "boolean",
+                                    "label": "Inherited"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array",
+                        "label": "Permission Details"
+                    },
+                    {
+                        "name": "deleted",
+                        "type": "boolean",
+                        "label": "Deleted"
+                    },
+                    {
+                        "name": "pendingOwner",
+                        "type": "boolean",
+                        "label": "Pending Owner"
+                    },
+                    {
+                        "name": "webContentLink",
+                        "type": "url",
+                        "label": "Web Content Link"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "onesaas:aitranscribeaudiofile",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 2798940
+            },
+            "mapper": {
+                "url": "{{3.webContentLink}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            },
+                            "label": "My 0-CodeKit connection (Kate)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Other Input Parameters"
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 7,
+            "module": "google-docs:createADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 2456606
+            },
+            "mapper": {
+                "name": "Customer Document",
+                "footer": false,
+                "header": false,
+                "content": "<!DOCTYPE html><html lang=\"eng\">    <body>        <p> {{2.text}} </p>    </body>",
+                "folderId": "/1JXKhTyw5RMeGCKvkhbHIlut7AIHE7eI1",
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "0Codekit"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Make Academy (catherinechelagat99@gmail.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name",
+                        "required": true
+                    },
+                    {
+                        "name": "content",
+                        "type": "text",
+                        "label": "Content",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "header",
+                        "type": "boolean",
+                        "label": "Insert a Header",
+                        "required": true
+                    },
+                    {
+                        "name": "footer",
+                        "type": "boolean",
+                        "label": "Insert a Footer",
+                        "required": true
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Document's Location",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.make.com"
+    }
+}

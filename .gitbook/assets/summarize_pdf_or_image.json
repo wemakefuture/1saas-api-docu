@@ -1,0 +1,989 @@
+{
+    "name": "0CodeKit Education Use-Case",
+    "flow": [
+        {
+            "id": 1,
+            "module": "dropbox:watchFiles2",
+            "version": 5,
+            "parameters": {
+                "path": "/university/source-documents",
+                "limit": 1,
+                "recursive": false,
+                "undefined": "list",
+                "__IMTCONN__": 2889426
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 282,
+                    "y": 7
+                },
+                "restore": {
+                    "parameters": {
+                        "undefined": {
+                            "label": "Select from List"
+                        },
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "type": "select",
+                        "label": "Folder Search Method",
+                        "validate": {
+                            "enum": [
+                                "list",
+                                "keyword"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "recursive",
+                        "type": "boolean",
+                        "label": "Watch also subfolders",
+                        "required": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder Path"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 16,
+            "module": "dropbox:getFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 2889426
+            },
+            "mapper": {
+                "path": "/university/source-documents/{{1.name}}",
+                "select": "file"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 531,
+                    "y": 10
+                },
+                "restore": {
+                    "expect": {
+                        "path": {
+                            "mode": "edit"
+                        },
+                        "select": {
+                            "label": "Select a file"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (slema@wemakefuture.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Way of selecting files",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "file"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "path",
+                        "type": "file",
+                        "label": "File",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 17,
+            "module": "onesaas:storagetempadd",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 2940965
+            },
+            "mapper": {
+                "buffer": "{{16.data}}",
+                "fileName": "{{16.fileName}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 785,
+                    "y": 14
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Santi2",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "buffer",
+                        "type": "buffer",
+                        "label": "File",
+                        "required": true
+                    },
+                    {
+                        "name": "fileName",
+                        "type": "text",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "buffer",
+                        "type": "buffer",
+                        "label": "File",
+                        "required": true
+                    },
+                    {
+                        "name": "fileName",
+                        "type": "text",
+                        "label": "File Name",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 1049,
+                    "y": 20
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 5,
+                            "module": "onesaas:pdfOcr",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 2940965
+                            },
+                            "filter": {
+                                "name": "isPdf",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.name}}",
+                                            "b": "pdf",
+                                            "o": "text:contain:ci"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "pdfUrl": "{{17.url}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1205,
+                                    "y": -191
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Santi2",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "onesaas2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "otherInputParameters": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:onesaas2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "pdfUrl",
+                                        "type": "text",
+                                        "label": "PDF URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "pdfUrl",
+                                        "type": "text",
+                                        "label": "PDF URL",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 28,
+                            "module": "onesaas:aitoolongtoread",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 2940965
+                            },
+                            "mapper": {
+                                "prompt": "{{5.recognizedText}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1508,
+                                    "y": -199
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Santi2",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "onesaas2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "otherInputParameters": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:onesaas2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Input text",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Input text",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 29,
+                            "module": "onesaas:markdownStringToPdf",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 2940965
+                            },
+                            "mapper": {
+                                "markdownString": "# Summary of {{1.name}}\n{{28.data}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1819,
+                                    "y": -202
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Santi2",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "onesaas2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "otherInputParameters": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:onesaas2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "markdownString",
+                                        "type": "text",
+                                        "label": "Markdown String"
+                                    },
+                                    {
+                                        "name": "css",
+                                        "type": "text",
+                                        "label": "CSS"
+                                    },
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "markdownString",
+                                        "type": "text",
+                                        "label": "Markdown String"
+                                    },
+                                    {
+                                        "name": "css",
+                                        "type": "text",
+                                        "label": "CSS"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 32,
+                            "module": "dropbox:uploadLargeFile",
+                            "version": 5,
+                            "parameters": {
+                                "__IMTCONN__": 2889426
+                            },
+                            "mapper": {
+                                "path": "/university/summaries",
+                                "filename": "summarized_{{16.fileName}}",
+                                "data": "{{29.data}}",
+                                "overwrite": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 2141,
+                                    "y": -202
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My Dropbox connection (slema@wemakefuture.com)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "dropbox"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "path": {
+                                            "mode": "chose"
+                                        },
+                                        "overwrite": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:dropbox",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "path",
+                                        "type": "folder",
+                                        "label": "Folder",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Data",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "overwrite",
+                                        "type": "boolean",
+                                        "label": "Overwrite an existing file",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 18,
+                            "module": "onesaas:aipicturetextrecognition",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 2940965
+                            },
+                            "filter": {
+                                "name": "isImage",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.name}}",
+                                            "o": "text:contain:ci",
+                                            "b": "png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "a": "{{1.name}}",
+                                            "o": "text:equal:ci",
+                                            "b": "jpg"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "a": "{{1.name}}",
+                                            "o": "text:contain:ci",
+                                            "b": "jpeg"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "imageUrl": "{{17.url}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1212,
+                                    "y": 218
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Santi2",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "onesaas2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "otherInputParameters": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:onesaas2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "imageUrl",
+                                        "type": "url",
+                                        "label": "Image URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "imageUrl",
+                                        "type": "url",
+                                        "label": "Image URL",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 34,
+                            "module": "onesaas:aitoolongtoread",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 2940965
+                            },
+                            "mapper": {
+                                "prompt": "{{18.recognizedTexts}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1512,
+                                    "y": 218
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Santi2",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "onesaas2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "otherInputParameters": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:onesaas2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Input text",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Input text",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 35,
+                            "module": "onesaas:markdownStringToPdf",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 2940965
+                            },
+                            "mapper": {
+                                "markdownString": "# Summary of {{16.fileName}}\n{{34.data}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1812,
+                                    "y": 218
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Santi2",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "onesaas2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "otherInputParameters": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:onesaas2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "otherInputParameters",
+                                        "type": "array",
+                                        "label": "Other Input Parameters",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key"
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "any",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "markdownString",
+                                        "type": "text",
+                                        "label": "Markdown String"
+                                    },
+                                    {
+                                        "name": "css",
+                                        "type": "text",
+                                        "label": "CSS"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 37,
+                            "module": "dropbox:uploadLargeFile",
+                            "version": 5,
+                            "parameters": {
+                                "__IMTCONN__": 2889426
+                            },
+                            "mapper": {
+                                "path": "/university",
+                                "filename": "summarized{{1.name}}.pdf",
+                                "data": "{{35.data}}",
+                                "overwrite": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 2137,
+                                    "y": 225
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My Dropbox connection (slema@wemakefuture.com)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "dropbox"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "path": {
+                                            "mode": "chose"
+                                        },
+                                        "overwrite": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:dropbox",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "path",
+                                        "type": "folder",
+                                        "label": "Folder",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Data",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "overwrite",
+                                        "type": "boolean",
+                                        "label": "Overwrite an existing file",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.make.com"
+    }
+}
