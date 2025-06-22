@@ -1,5 +1,6 @@
 ---
 description: Effortlessly execute code with zero complications.
+hidden: true
 icon: code
 ---
 
@@ -7,7 +8,7 @@ icon: code
 
 ### Check out our Code Editor:
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Easily test your code in our integrated Code Editor before running it within your automation workflows. The Code Editor enables you to input sample values for variables that will later be dynamically populated by your automation flow. Once you've tested and verified the code runs flawlessly, simply save the snippet to your 0CodeKit account and access it on your preferred automation platform. From there, just provide the final values for the variables specified in the editor, and you're all set!
 
