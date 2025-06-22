@@ -1,8 +1,8 @@
 ---
-icon: suitcase
+icon: graduation-cap
 ---
 
-# Use Cases & Tutorials
+# Tutorials
 
 How to run custom Code in Make using 0CodeKit.
 
@@ -30,7 +30,7 @@ Detect text in an image using AI.
 
 Translate text using 0CodeKit.
 
-{% file src="../.gitbook/assets/translate_email.json" %}
+{% file src=".gitbook/assets/translate_email.json" %}
 Check out the Make blueprint
 {% endfile %}
 
@@ -40,7 +40,7 @@ Check out the Make blueprint
 
 Summarize PDF and image documents using 0CodeKit
 
-{% file src="../.gitbook/assets/summarize_pdf_or_image.json" %}
+{% file src=".gitbook/assets/summarize_pdf_or_image.json" %}
 Check out the Make blueprint
 {% endfile %}
 
@@ -48,7 +48,7 @@ Check out the Make blueprint
 
 Transcribe audio files with 0CodeKit
 
-{% file src="../.gitbook/assets/transcribe_audio.json" %}
+{% file src=".gitbook/assets/transcribe_audio.json" %}
 Check out the Make blueprint
 {% endfile %}
 
@@ -56,7 +56,7 @@ Check out the Make blueprint
 
 Use AI to redact sensitive information from PDF documents.
 
-{% file src="../.gitbook/assets/redact_pdf.json" %}
+{% file src=".gitbook/assets/redact_pdf.json" %}
 Check out the Make blueprint
 {% endfile %}
 

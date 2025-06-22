@@ -1,5 +1,5 @@
 ---
-icon: users-viewfinder
+icon: users
 ---
 
 # Community
