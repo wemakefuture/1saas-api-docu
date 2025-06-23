@@ -20,10 +20,10 @@ Add a new HTTP node and open it.
 
 On the top right click on import curl and paste the curl command from our api documation
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (15).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure></div>
 
 After the import you just have to fill in the fields like your actual API key and body parameters.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt="" width="563"><figcaption></figcaption></figure>
 
 With that you are now directly connected to the 0CodeKit API :tada:
