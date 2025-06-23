@@ -45,6 +45,12 @@ If you just want to start using 0Codekit click here:&#x20;
 
 
 
+Interested in more PDF endpoints:
+
+{% embed url="https://www.0codekit.com/pdf-endpoints" %}
+
+
+
 ## 2. Business Kit:
 
 ### Validate Email:
