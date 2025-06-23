@@ -45,7 +45,7 @@ If you just want to start using 0Codekit click here:&#x20;
 
 
 
-Interested in more PDF endpoints:
+Interested in more PDF endpoints? Then checkout this link:
 
 {% embed url="https://www.0codekit.com/pdf-endpoints" %}
 
