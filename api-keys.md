@@ -6,7 +6,7 @@ icon: key-skeleton
 
 Keep this key confidential. You can see after signup the key under your account tab:
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>Your 0CodeKit API Key</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Your 0CodeKit API Key</p></figcaption></figure>
 
 ### Can I use the Key for my Customers?
 
@@ -16,7 +16,7 @@ Yes, you can resell and automate as an agency for your clients. We don't mind if
 
 You can easily use our **stripe portal** to manage your subscription. Login into 0-CodeKit and click here:
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Here you can manage your subscription.
 
@@ -24,7 +24,7 @@ Here you can manage your subscription.
 
 Follow the previous step to open the Stripe portal. You can redeem your code there.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<.gitbook/assets/image (7).png>)
 
 Click on "Add Promotion Code" under the Subtotal in our Stripe Portal.
 
@@ -32,4 +32,4 @@ Click on "Add Promotion Code" under the Subtotal in our Stripe Portal.
 
 The Stripe Portal is your way to manage the subscription with 0CodeKit.
 
-![](<../.gitbook/assets/image (6).png>)
+![](<.gitbook/assets/image (6).png>)

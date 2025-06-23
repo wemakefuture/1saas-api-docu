@@ -11,11 +11,87 @@ icon: play
 
 0CodeKit is available on Make.com Zapier and n8n. We also offer direct API access.
 
-### Code Kit:
+If you just want to start using 0Codekit click here:&#x20;
+
+{% embed url="https://my.0codekit.com/en/dashboard/account" %}
+
+## 0Codekit has many Kits. Here are some:
+
+## 1. PDF Kit:
+
+### Merge PDFs:
+
+[https://scalar.0codekit.com/#tag/pdf/post/pdf/merge](https://scalar.0codekit.com/#tag/pdf/post/pdf/merge)
+
+### Docx to PDF:
+
+[https://scalar.0codekit.com/#tag/pdf/post/pdf/docx-to-pdf](https://scalar.0codekit.com/#tag/pdf/post/pdf/docx-to-pdf)
+
+### HTML to PDF:
+
+[https://scalar.0codekit.com/#tag/pdf/post/pdf/html](https://scalar.0codekit.com/#tag/pdf/post/pdf/html)
+
+### Markdown to PDF:
+
+[https://scalar.0codekit.com/#tag/pdf/post/pdf/markdownstringtopdf](https://scalar.0codekit.com/#tag/pdf/post/pdf/markdownstringtopdf)
+
+### Redact Sensitive Information from PDF:
+
+[https://scalar.0codekit.com/#tag/pdf/post/ai/redact-pdf](https://scalar.0codekit.com/#tag/pdf/post/ai/redact-pdf)
+
+### Compress PDF:
+
+[https://scalar.0codekit.com/#tag/pdf/post/pdf/compress](https://scalar.0codekit.com/#tag/pdf/post/pdf/compress)
+
+
+
+## 2. Business Kit:
+
+### Validate Email:
+
+[https://scalar.0codekit.com/#tag/business/post/business/validate/email](https://scalar.0codekit.com/#tag/business/post/business/validate/email)
+
+### Validate Domain:
+
+[https://scalar.0codekit.com/#tag/business/post/business/verify/domain](https://scalar.0codekit.com/#tag/business/post/business/verify/domain)
+
+### Validate IBAN:
+
+[https://scalar.0codekit.com/#tag/business/post/business/validate/iban](https://scalar.0codekit.com/#tag/business/post/business/validate/iban)
+
+
+
+## 3. AI Kit:
+
+### OCR Read text from image using AI:
+
+[https://scalar.0codekit.com/#tag/ai/post/ai/advancedocr](https://scalar.0codekit.com/#tag/ai/post/ai/advancedocr)
+
+
+
+## 4. Image Kit:
+
+### Crop Image:
+
+[https://scalar.0codekit.com/#tag/image/post/image/crop](https://scalar.0codekit.com/#tag/image/post/image/crop)
+
+### HTML to Image:
+
+[https://scalar.0codekit.com/#tag/image/post/image/html](https://scalar.0codekit.com/#tag/image/post/image/html)
+
+
+
+## 5. Code Kit:
 
 We offer both Python and JavaScript code execution.
 
-### Javascript and Python
+### Javascript
+
+[https://scalar.0codekit.com/#tag/code/post/code/javascript](https://scalar.0codekit.com/#tag/code/post/code/javascript)
+
+### Python
+
+[https://scalar.0codekit.com/#tag/code/post/code/python](https://scalar.0codekit.com/#tag/code/post/code/python)
 
 {% hint style="info" %}
 There are two methods to return your result.
@@ -29,10 +105,6 @@ Or just:
 Both methods will return the result in the JSON\
 `{ "data": YOURVARIABLE }`
 {% endhint %}
-
-###
-
-###
 
 ### Check out our Code Editor:
 
